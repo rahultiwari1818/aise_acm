@@ -5,7 +5,7 @@ import SectionHeader from "./sub-components/SectionHeader";
 
 export default function Sponsors() {
   return (
-    <section className="px-4 py-12 md:px-12 max-w-7xl mx-auto text-center bg-gray-50 rounded-xl">
+    <section className="px-4 py-12 md:px-12 max-w-7xl mx-auto text-center bg-white rounded-xl">
       <SectionHeader title={"Sponsors"}/>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">

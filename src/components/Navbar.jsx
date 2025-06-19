@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export default function Navbar() {
@@ -7,8 +6,13 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "#" },
     { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Agenda", href: "#agenda" },
+    { label: "Speakers", href: "#Speakers" },
+    { label: "Venue", href: "#Venue" },
+    { label: "Grant", href: "#Grant" },
+    { label: "Registration", href: "#Registration" },
+    { label: "Contact", href: "#Contact" },
+    { label: "Hackathon", href: "#Hackathon" },
   ];
 
   return (

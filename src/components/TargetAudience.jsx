@@ -3,7 +3,7 @@ import data from "../data/targetAudience.js";
 
 export default function TargetAudience() {
   return (
-    <section className="px-4 md:px-10 py-12 bg-white">
+    <section className="px-4 md:px-10 py-12 ">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">{data.title}</h2>
         <div className="h-1 w-16 bg-gradient-to-r from-indigo-500 to-blue-500 mx-auto mb-4 rounded" />

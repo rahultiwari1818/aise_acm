@@ -4,10 +4,10 @@ import LineChart from "../assets/icons/LineChart.svg";
 import UserGear from "../assets/icons/UserGear.svg";
 
 const data = {
-  "title": "About the Summer School",
+  "title": "About the Winter School",
   "edition": "1st Edition",
-  "eventName": "International Summer School on LLM-based Agents for Software Engineering",
-  "eventCode": "LLM4ASE 2025",
+  "eventName": "International Winter School on AI-Infused Software Engineering - Research and Practice",
+  "eventCode": "AISE 2026",
   "description": "The First International Summer School on LLM-based Agents for Software Engineering aims to cover several aspects related to the use of LLM-based agents for software development. It serves as a meeting point for learning and discussing the latest trends related to the application of Artificial Intelligence techniques in software development.",
   "highlight": "The school features a panel of high-level speakers with extensive experience in the research lines pursued within the program.",
   "topics": [
