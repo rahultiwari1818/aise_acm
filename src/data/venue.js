@@ -4,16 +4,17 @@ const data = {
     "title": "Location",
     "heading": "Dhirubhai Ambani University",
     "lines": [
-      "Edificio Contenedor de Institutos Universitarios,",
-      "Universidad de Extremadura,",
-      "Cáceres, 10004, Spain"
+       
+      "Dhirubhai Ambani University,",
+      "Near Indroda Circle,",
+      "Gandhinagar (382 007), Gujarat (India)"
     ]
   },
   "dates": {
     "icon": "📅",
     "title": "Dates",
-    "range": "September 1–3, 2025",
-    "note": "3 intensive days of learning and networking"
+    "range": "January 7–10, 2026",
+    "note": "4 intensive days of learning and networking"
   },
   "format": {
     "icon": "🧑‍🤝‍🧑",

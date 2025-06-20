@@ -68,10 +68,10 @@ export default function VenueDates() {
 
           <div className="flex justify-between mt-4 text-sm text-gray-600">
             <div>
-              <span className="font-semibold text-gray-800">3</span> Days
+              <span className="font-semibold text-gray-800">4</span> Days
             </div>
             <div>
-              <span className="font-semibold text-gray-800">20</span> Max Participants
+              <span className="font-semibold text-gray-800">40</span> Max Participants
             </div>
           </div>
         </div>

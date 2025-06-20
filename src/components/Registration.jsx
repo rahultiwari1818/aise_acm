@@ -41,14 +41,14 @@ Accommodation Scholarship: ${formData.scholarship}`
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 text-sm sm:text-base">
           <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
-            🚻 Limited to 15–20 participants
+            🚻 Limited to 40 participants
           </span>
-          <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
+          {/* <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
             🗓️ Free registration deadline: 15 July
-          </span>
+          </span> */}
         </div>
 
-        <div className="text-center mb-2 font-semibold text-lg">
+        {/* <div className="text-center mb-2 font-semibold text-lg">
           📧 How to Register
         </div>
         <p className="text-center text-sm text-gray-500 mb-6">
@@ -56,13 +56,13 @@ Accommodation Scholarship: ${formData.scholarship}`
           <a href="mailto:chemacm@unex.es" className="text-blue-600 underline">
             chemacm@unex.es
           </a>
-        </p>
+        </p> */}
 
-        <div className="bg-blue-50 border border-blue-300 p-3 rounded mb-6 text-sm text-blue-700">
+        {/* <div className="bg-blue-50 border border-blue-300 p-3 rounded mb-6 text-sm text-blue-700">
           <strong>Note:</strong> After clicking “Submit Registration”, your
           default email client will open with the form data pre-filled. Simply
           send the email to complete your registration.
-        </div>
+        </div> */}
 
         <form className="grid grid-cols-1 gap-4">
           <input
@@ -127,7 +127,7 @@ Accommodation Scholarship: ${formData.scholarship}`
             rows={4}
             className="input"
           />
-          <select
+          {/* <select
             name="scholarship"
             value={formData.scholarship}
             onChange={handleChange}
@@ -137,7 +137,7 @@ Accommodation Scholarship: ${formData.scholarship}`
             <option value="">Select an option</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
-          </select>
+          </select> */}
         </form>
 
         <button
@@ -153,20 +153,20 @@ Accommodation Scholarship: ${formData.scholarship}`
           </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm text-gray-700">
             <div>
-              <p className="font-medium">Roberto Rodríguez Echeverría</p>
+              <p className="font-medium">Saurabh Tiwari</p>
               <p>Associate Professor</p>
-              <a href="mailto:rre@unex.es" className="text-blue-600 underline">
-                rre@unex.es
+              <a href="mailto:saurabh_t@daiict.ac.in" className="text-blue-600 underline">
+                saurabh_t@daiict.ac.in
               </a>
             </div>
             <div>
-              <p className="font-medium">José María Conejero Manzano</p>
+              <p className="font-medium">Yash Agrawal</p>
               <p>Associate Professor</p>
               <a
-                href="mailto:chemacm@unex.es"
+                href="mailto:yash_agrawal@daiict.ac.in"
                 className="text-blue-600 underline"
               >
-                chemacm@unex.es
+                yash_agrawal@daiict.ac.in
               </a>
             </div>
           </div>

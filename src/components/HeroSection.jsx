@@ -76,27 +76,27 @@ export default function HeroSection() {
 
       {/* Title */}
       <h1 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-extrabold text-center leading-tight">
-        International Summer School
+        Introduction to LLMs and GenAI Techniques
         <br />
         <span className="text-yellow-400">on LLM-based Agents</span>
         <br />
-        <span className="text-2xl font-medium text-gray-200">
+        {/* <span className="text-2xl font-medium text-gray-200">
           for Software Engineering
-        </span>
+        </span> */}
       </h1>
 
       {/* Subtitle */}
       <p className="relative z-10 mt-4 text-yellow-400 font-bold tracking-wide text-lg">
-        LLMA4SE 2025
+        AISE 2026
       </p>
 
       {/* Info Badges */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-sm font-medium">
         <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
-          📅 September 1–3, 2025
+          📅 7-10 January
         </span>
         <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
-          📍 University of Extremadura, Cáceres, Spain
+          📍 Dhirubhai Ambani University , Gandhinagar
         </span>
         <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
           🧑‍🤝‍🧑 In-Person Event
@@ -105,7 +105,7 @@ export default function HeroSection() {
 
       {/* Feature Tags */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-xs font-medium">
-        {["AI-Powered Learning", "Expert Speakers", "Hands-on Workshops", "Free Registration"].map((item) => (
+        {["AI-Powered Learning", "Expert Speakers", "Hands-on Workshops", "Grants"].map((item) => (
           <span
             key={item}
             className="bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition"
@@ -118,16 +118,12 @@ export default function HeroSection() {
       {/* CTA Buttons */}
       <div className="relative z-10 mt-8 flex flex-wrap justify-center gap-4">
         <a
-          href="https://i3lab.unex.es/summer-school/#registration"
-          target="_blank"
+          href="#Registration"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 rounded-full text-white font-semibold shadow hover:scale-105 transition"
         >
           🚀 Register Now
         </a>
-        <button className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-          ℹ️ Learn More
-        </button>
       </div>
     </section>
   );

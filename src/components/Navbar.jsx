@@ -1,18 +1,18 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#about" },
-    { label: "Agenda", href: "#agenda" },
-    { label: "Speakers", href: "#Speakers" },
-    { label: "Venue", href: "#Venue" },
-    { label: "Grant", href: "#Grant" },
-    { label: "Registration", href: "#Registration" },
-    { label: "Contact", href: "#Contact" },
-    { label: "Hackathon", href: "#Hackathon" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/#about" },
+    { label: "Agenda", href: "/#agenda" },
+    { label: "Speakers", href: "/#Speakers" },
+    { label: "Venue", href: "/#Venue" },
+    { label: "Grant", href: "/#Grant" },
+    { label: "Registration", href: "/#Registration" },
+    { label: "Hackathon", href: "/hackathon" },
   ];
 
   return (
@@ -23,6 +23,12 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
+            link.href === "Hackathon"
+            ?
+            <Link to={link.href} className="text-gray-700 hover:text-blue-500 transition">
+              {link.label}
+            </Link>
+            :
             <a
               key={link.href}
               href={link.href}

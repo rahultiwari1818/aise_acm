@@ -5,16 +5,16 @@ import certificate from "../assets/Certificate.png";
 
 const data = {
   "title": "Target Audience",
-  "description": "This summer school is designed for professionals and students passionate about the intersection of AI and software engineering",
+  "description": "This Winter school is designed for professionals and students passionate about the intersection of AI and software engineering",
   "audiences": [
     {
-      "title": "PhD Students",
+      "title": "Master's & PhD Students",
       "icon": student,
       "description": "Primarily those in early stages, but also others interested in applying these techniques to their research.",
       "points": ["Research guidance", "Hands-on experience", "Networking opportunities"]
     },
     {
-      "title": "University Professors",
+      "title": "Faculties &  Professors",
       "icon": professor,
       "description": "Educators seeking to integrate the school's topics into their courses or curricula.",
       "points": ["Curriculum enhancement", "Teaching resources", "Academic collaboration"]

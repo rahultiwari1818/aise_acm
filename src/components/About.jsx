@@ -23,7 +23,7 @@ export default function About() {
       {/* Key Topics */}
       <section className="mt-16">
         <h4 className="text-2xl font-semibold text-center mb-10">Key Topics</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-4 lg:gap-5 xl:gap-6">
           {aboutJson.topics.map((topic, idx) => (
             <TopicCard key={idx} {...topic} />
           ))}

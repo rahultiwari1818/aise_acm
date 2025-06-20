@@ -2,11 +2,11 @@ export default function Footer() {
   return (
     <footer className="text-center py-8 text-sm text-gray-600 bg-white">
       <p className="mb-1">
-        © 2025 LLM-Based Agents for SE Summer School | University of Extremadura
+        © 2026 LLM-Based Agents for SE Winter School | Dhirubhai Ambani University
       </p>
-      <p className="mb-4">
+      {/* <p className="mb-4">
         Organized by <span className="font-medium">i3Lab (Quercus Group)</span> & INTIA
-      </p>
+      </p> */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
         <p>
           Developed and Managed by{" "}
