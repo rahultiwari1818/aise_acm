@@ -9,6 +9,7 @@ import SocialEvents from "../../components/SocialEvents";
 import Accommodation from "../../components/Accomodation";
 import RegistrationForm from "../../components/Registration";
 import Sponsors from "../../components/Sponsors";
+import TravelGrants from "../../components/TravelGrants";
 
 export default function Home() {
   return (
@@ -76,9 +77,9 @@ export default function Home() {
 
         <section
           id="Grant"
-          className="scroll-mt-20 h-[50vh] bg-gray-200 flex justify-center items-center"
+          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
-          <p className="text-xl">Grant Section (Placeholder)</p>
+            <TravelGrants/>
         </section>
 
         <section
