@@ -6,7 +6,7 @@ export default function TopicCard({ icon, title, description }) {
     >
       <div className="flex justify-center items-center">
         <div className=" mb-4 bg-blue-400 rounded-full max-w-fit ">
-          <img src={icon} alt="icon" className="w-16 h-16 mx-auto "/>
+          <img src={icon} alt="icon" className="w-16 h-16 mx-auto rounded-full "/>
         </div>
       </div>
       <h5 className="text-lg font-semibold  mb-2">{title}</h5>
