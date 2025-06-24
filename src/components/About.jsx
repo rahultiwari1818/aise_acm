@@ -9,6 +9,7 @@ export default function About() {
       {/* Header */}
       <AboutSectionHeader
         title={aboutJson.title}
+        subHeading={aboutJson.subTitle}
         subtitle={aboutJson.edition}
         description={aboutJson.description}
         highlight={aboutJson.highlight}
@@ -17,6 +18,10 @@ export default function About() {
         <h3 className="text-2xl md:text-3xl font-bold text-indigo-700">
           {aboutJson.eventName}
         </h3>
+        <h4 className="text-2xl md:text-3xl font-bold text-indigo-700">
+          {aboutJson.subTitle}
+        </h4>
+        
         <p className="text-sm text-gray-500 italic">{aboutJson.eventCode}</p>
       </div>
 
@@ -31,14 +36,14 @@ export default function About() {
       </section>
 
       {/* Chairs */}
-      <section className="mt-20">
+      {/* <section className="mt-20">
         <h4 className="text-2xl font-semibold text-center mb-10">Chairs</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aboutJson.chairs.map((chair, idx) => (
             <ChairCard key={idx} {...chair} />
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="mt-20 text-center text-sm text-gray-500 italic">

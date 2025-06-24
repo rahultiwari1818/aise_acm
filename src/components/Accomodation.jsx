@@ -68,9 +68,8 @@ export default function Accommodation() {
     <section id="Accommodation" className="px-4 py-12 md:px-12 max-w-7xl mx-auto">
       <SectionHeader title={"Accommodation"} />
 
-      <p className="text-center text-gray-600 max-w-2xl mx-auto mb-6">
-        DAU offers a wide range of accommodation options to suit every budget and preference.
-        Hostel accommodation is free for students and faculty. Final details will be notified to selected participants.
+      <p className="text-center text-gray-600 max-w-4xl mx-auto mb-6">
+        The hostel accommodation is availiable for participants on sharing basis in boys and girls hostels within DAU campus.
       </p>
 
       {/* Main Info */}
@@ -78,20 +77,11 @@ export default function Accommodation() {
         <p><strong>✅ Availability:</strong> {acc.availability}</p>
         <p><strong>ℹ️ Confirmation:</strong> {acc.confirmation}</p>
         <p><strong>💰 Charges:</strong> {acc.charges}</p>
-        <p>
-          <a
-            href={acc.form_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
-          >
-            Fill Accommodation Request Form
-          </a>
-        </p>
+        
       </div>
 
       {/* Contact Info */}
-      <div className="grid md:grid-cols-2 gap-6 mb-10">
+      {/* <div className="grid md:grid-cols-2 gap-6 mb-10">
         <div className="p-4 border rounded-lg shadow-sm bg-white">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">👨 Male Contact</h3>
           <p><strong>{acc.contacts.male.name}</strong></p>
@@ -103,20 +93,53 @@ export default function Accommodation() {
           <p><strong>{acc.contacts.female.name}</strong></p>
           <p className="text-blue-600">{acc.contacts.female.phone}</p>
         </div>
-      </div>
+      </div> */}
 
-      {/* Female Faculty Info */}
+
+<div className="lg:flex justify-between items-center gap-5 ">
+
+      {/* Female  Info */}
       <div className="mb-8 bg-pink-50 border border-pink-200 p-6 rounded-lg">
-        <h3 className="text-md font-semibold text-pink-700 mb-2">👩‍🏫 Female Faculty Accommodation</h3>
+        <h3 className="text-md font-semibold text-pink-700 mb-2">👩‍🏫 Female  Accommodation</h3>
         <p><strong>📍 Location:</strong> {acc.female_faculty.location}</p>
         <p><strong>💰 Charges:</strong> {acc.female_faculty.charges}</p>
         <p><strong>📢 Notification:</strong> {acc.female_faculty.notification}</p>
         <p><strong>✅ Action Required:</strong> {acc.female_faculty.action_required}</p>
+        <p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
+          >
+            Fill Accommodation Request Form
+          </a>
+        </p>
       </div>
+
+      {/* Male  Info */}
+      <div className="mb-8 bg-pink-50 border border-pink-200 p-6 rounded-lg">
+        <h3 className="text-md font-semibold text-pink-700 mb-2">👩‍🏫 Male  Accommodation</h3>
+        <p><strong>📍 Location:</strong> {acc.male_faculty.location}</p>
+        <p><strong>💰 Charges:</strong> {acc.male_faculty.charges}</p>
+        <p><strong>📢 Notification:</strong> {acc.male_faculty.notification}</p>
+        <p><strong>✅ Action Required:</strong> {acc.male_faculty.action_required}</p>
+        <p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
+          >
+            Fill Accommodation Request Form
+          </a>
+        </p>
+      </div>
+</div>
 
       {/* Male Faculty / Industry */}
       <div className="mb-8 bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-        <h3 className="text-md font-semibold text-yellow-700 mb-2">🏢 Male Faculty / Industry Guests</h3>
+        <h3 className="text-md font-semibold text-yellow-700 mb-2">🏢 Faculty/Industrial Participants</h3>
         <p>{acc.male_faculty_and_industrial_persons.recommendation}</p>
         <p>
           <a
@@ -125,6 +148,7 @@ export default function Accommodation() {
             rel="noopener noreferrer"
             className="text-yellow-800 underline"
           >
+
             View Recommended Hotels
           </a>
         </p>

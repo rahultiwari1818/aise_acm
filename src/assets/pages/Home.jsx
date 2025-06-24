@@ -30,7 +30,7 @@ export default function Home() {
           id="agenda"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 py-5 bg-gray-100 shadow-2xl"
         >
-          {/* <Agenda /> */}
+          <Agenda />
 
         </section>
 
@@ -61,12 +61,12 @@ export default function Home() {
           <AboutCity />
         </section>
 
-        <section
+        {/* <section
           id="SocialEvents"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
         >
           <SocialEvents />
-        </section>
+        </section> */}
 
         <section
           id="Accommodation"

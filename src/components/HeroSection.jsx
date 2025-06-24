@@ -1,53 +1,52 @@
 "use client";
-import { motion } from "framer-motion";
 
-const codeSnippets = [
-  {
-    text: `from agent_framework import ReasoningAgent
+// const codeSnippets = [
+//   {
+//     text: `from agent_framework import ReasoningAgent
 
-class CodeReviewAgent:
-    def analyze_pr(self, diff):
-        issues = self.detect_patterns(diff)
-        suggestions = self.suggest_improvements()
-        return self.format_review(issues, suggestions)`,
-    top: "20%",
-    left: "5%",
-  },
-  {
-    text: `const agent = new SoftwareAgent({
-  codeGeneration: true,
-  testing: true,
-  debugging: true
-});
-await agent.processRequirements(userStory);`,
-    top: "15%",
-    left: "70%",
-  },
-  {
-    text: `async function orchestrateAgents() {
-  const swarm = new AgentSwarm();
-  return await swarm.collaborate(complexTask);
-}`,
-    top: "65%",
-    left: "10%",
-  },
-  {
-    text: `interface AgentOrchestrator {
-  delegate(task: Task): Promise<AgentResult>;
-  coordinate(agents: Agent[]): Workflow;
-  monitor(execution: ExecutionContext): void;
-}`,
-    top: "60%",
-    left: "75%",
-  },
-];
+// class CodeReviewAgent:
+//     def analyze_pr(self, diff):
+//         issues = self.detect_patterns(diff)
+//         suggestions = self.suggest_improvements()
+//         return self.format_review(issues, suggestions)`,
+//     top: "20%",
+//     left: "5%",
+//   },
+//   {
+//     text: `const agent = new SoftwareAgent({
+//   codeGeneration: true,
+//   testing: true,
+//   debugging: true
+// });
+// await agent.processRequirements(userStory);`,
+//     top: "15%",
+//     left: "70%",
+//   },
+//   {
+//     text: `async function orchestrateAgents() {
+//   const swarm = new AgentSwarm();
+//   return await swarm.collaborate(complexTask);
+// }`,
+//     top: "65%",
+//     left: "10%",
+//   },
+//   {
+//     text: `interface AgentOrchestrator {
+//   delegate(task: Task): Promise<AgentResult>;
+//   coordinate(agents: Agent[]): Workflow;
+//   monitor(execution: ExecutionContext): void;
+// }`,
+//     top: "60%",
+//     left: "75%",
+//   },
+// ];
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#111B3E] to-[#1D2975] text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
+    <section className="relative min-h-screen hero-section-bg text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
 
       {/* Background Animated Code */}
-      {codeSnippets.map((snippet, idx) => (
+      {/* {codeSnippets.map((snippet, idx) => (
         <motion.pre
           key={idx}
           initial={{ opacity: 0.5, y: 30 }}
@@ -67,7 +66,7 @@ export default function HeroSection() {
         >
           {snippet.text}
         </motion.pre>
-      ))}
+      ))} */}
 
       {/* Tag */}
       <div className="relative z-10 text-sm bg-indigo-600 px-4 py-1 rounded-full font-semibold mb-4">
@@ -76,9 +75,9 @@ export default function HeroSection() {
 
       {/* Title */}
       <h1 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-extrabold text-center leading-tight">
-        Introduction to LLMs and GenAI Techniques
+        Winter School on AI-Infused Software Engineering
         <br />
-        <span className="text-yellow-400">on LLM-based Agents</span>
+        <span className="text-yellow-400">Research and Practice</span>
         <br />
         {/* <span className="text-2xl font-medium text-gray-200">
           for Software Engineering
@@ -86,7 +85,7 @@ export default function HeroSection() {
       </h1>
 
       {/* Subtitle */}
-      <p className="relative z-10 mt-4 text-yellow-400 font-bold tracking-wide text-lg">
+      <p className="relative z-10 mt-4 text-black font-bold bg-white/50 px-4 py-2 rounded-full flex items-center gap-2 tracking-wide text-2xl">
         AISE 2026
       </p>
 
@@ -105,7 +104,7 @@ export default function HeroSection() {
 
       {/* Feature Tags */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-xs font-medium">
-        {["AI-Powered Learning", "Expert Speakers", "Hands-on Workshops", "Grants"].map((item) => (
+        {["AI-Powered Learning", "Expert Speakers", "Hands-on Sessions", "Grants"].map((item) => (
           <span
             key={item}
             className="bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition"

@@ -1,4 +1,4 @@
-import dau from "../assets/sponsors/dau.jpeg";
+import dau from "../assets/sponsors/dau.png";
 import sigsoft from "../assets/sponsors/sigsoft.png";
 
 const data = {

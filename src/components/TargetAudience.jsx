@@ -44,8 +44,8 @@ export default function TargetAudience() {
             key={idx}
             className="flex gap-4 items-start p-6 bg-gray-50 rounded-xl border border-gray-200"
           >
-            <div className="w-12 h-12 flex items-center justify-center bg-indigo-800 rounded-full">
-              <img src={note.icon} alt={note.title} className="w-12 h-12 rounded-full" />
+            <div className={` h-12 flex items-center justify-center bg-indigo-800 rounded-full ${idx===0  ? "w-16" : "w-12"}`}>
+              <img src={note.icon} alt={note.title} className={` h-12 rounded-full ${idx===0  ? "w-16" : "w-12"}`} />
             </div>
             <div>
               <h4 className="font-semibold text-gray-900 mb-1">{note.title}</h4>

@@ -1,8 +1,24 @@
 @import "tailwindcss";
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+html{
+   font-size: 18px;
+}
+
 .input {
   @apply w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.hero-section-bg{
+  background-image: url(./assets/homepage.jpg);
+  background-size: cover;
 }

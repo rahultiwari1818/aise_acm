@@ -14,7 +14,7 @@ const data = {
       "points": ["Research guidance", "Hands-on experience", "Networking opportunities"]
     },
     {
-      "title": "Faculties &  Professors",
+      "title": "Academicians",
       "icon": professor,
       "description": "Educators seeking to integrate the school's topics into their courses or curricula.",
       "points": ["Curriculum enhancement", "Teaching resources", "Academic collaboration"]

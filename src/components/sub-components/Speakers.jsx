@@ -1,4 +1,4 @@
-export default function SpeakerCard({ image, name, title, bio }) {
+export default function SpeakerCard({ image, name, bio,institution }) {
   return (
     <div
       className="relative bg-white border border-gray-200 rounded-xl shadow-md 
@@ -13,7 +13,7 @@ export default function SpeakerCard({ image, name, title, bio }) {
         />
         <div>
           <h4 className="text-xl font-bold text-gray-800">{name}</h4>
-          <p className="text-sm text-indigo-600">{title}</p>
+          <p className="text-sm text-indigo-600">{institution}</p>
         </div>
         <p className="text-sm text-gray-600">{bio}</p>
       </div>

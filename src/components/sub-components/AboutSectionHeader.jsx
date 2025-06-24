@@ -13,12 +13,14 @@ export default function AboutSectionHeader({
         <p className="text-sm text-gray-600 font-semibold">{subtitle}</p>
       )}
       {description && (
-        <p className="text-base text-gray-700 max-w-3xl mx-auto">
-          {description}
-        </p>
+        description?.map((desc)=>(
+          <p className="text-base text-gray-700 max-w-5xl mx-auto text-justify">
+            {desc}
+          </p>
+        ))
       )}
       {highlight && (
-        <p className="text-sm text-yellow-600 font-medium">⭐ {highlight}</p>
+        <p className="text-sm text-yellow-600 font-medium">⭐<br/> {highlight}</p>
       )}
     </div>
   );

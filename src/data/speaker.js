@@ -3,6 +3,8 @@ import chetan_sir from "../assets/speakers/chetan_sir.jpg";
 import meenakshi_maam from "../assets/speakers/meenakshi_d_souza.jpg";
 import santosh_sir from "../assets/speakers/santosh_singh.jpg";
 import sridhar_sir from "../assets/speakers/sridhar_chimalakonda.jpeg";
+import saurabh_sir from "../assets/speakers/saurabh_tiwari.jpg";
+import default_pic from "../assets/speakers/default.jpg";
 
 
 const data = {
@@ -38,7 +40,24 @@ const data = {
       "topic": "To be updated",
       "bio": "",
       "image": meenakshi_maam
-    }
+    },
+    {
+      "name": "Saurabh Tiwari",
+      "email": "",
+      "institution": "DAU Gandhinagar, India",
+      "topic": "To be updated",
+      "bio": "",
+      "image": saurabh_sir
+    },
+    {
+      "name": "",
+      "email": "",
+      "institution": "New Speakers to be added soon.",
+      "topic": "To be updated",
+      "bio": "",
+      "image": default_pic
+    },
+    
   ]
 };
 

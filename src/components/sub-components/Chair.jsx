@@ -1,4 +1,4 @@
-export default function ChairCard({ image, name, title, bio }) {
+export default function ChairCard({ image, name, title, bio,email}) {
   return (
     <div
       className="flex flex-col items-center gap-5 bg-white border border-gray-200 
@@ -14,6 +14,7 @@ export default function ChairCard({ image, name, title, bio }) {
         <p className="text-lg font-bold text-gray-800">{name}</p>
         <p className="text-sm text-indigo-600">{title}</p>
         <p className="text-sm text-gray-700 mt-2">{bio}</p>
+        <p className="text-sm text-gray-700 mt-2"><a href={`mailto:${email}`}>{email}</a></p>
       </div>
     </div>
   );

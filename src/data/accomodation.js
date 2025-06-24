@@ -62,9 +62,16 @@ const data = {
       "notification": "Participants will be notified by organizers subject to availability",
       "action_required": "Fill out the Google Form if planning to stay at the DAYS Hostel"
     },
+    "male_faculty": {
+      "location": "Boys' hostel within the campus",
+      "charges": "Waived off (free of cost)",
+      "notification": "Participants will be notified by organizers subject to availability",
+      "action_required": "Fill out the Google Form if planning to stay at the DAYS Hostel"
+    },
+    
     "male_faculty_and_industrial_persons": {
-      "recommendation": "Book accommodation independently",
-      "hotel_list_link": "https://drive.google.com/file/d/1HR_G_HCXcvGpDpycfACNhmRxcrOR5jAp/view?usp=sharing"
+      "recommendation": "In case, you want to stay in hotel. Please check the list of the suggested nearby hotels.",
+      "hotel_list_link": ""
     },
     "other_options": {
       "INFLIBNET": {

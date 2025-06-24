@@ -1,5 +1,8 @@
 import { useState } from "react";
 import SectionHeader from "./sub-components/SectionHeader";
+import ChairCard from "./sub-components/Chair";
+import saurabh_sir from "../assets/chairs/saurabh_tiwari.jpg";
+import yash_sir from "../assets/chairs/yash_agarwal.jpg";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -151,11 +154,21 @@ Accommodation Scholarship: ${formData.scholarship}`
           <h2 className="text-xl font-semibold mb-2">
             👥 Contact the Organizers
           </h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm text-gray-700">
+           <section className="mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ChairCard bio={""} name={"Saurabh Tiwari"} image={saurabh_sir}  email={"saurabh_t@dau.ac.in"} title={"Associate Professor"}/>
+            <ChairCard bio={""} name={"Yash Agrawal"} image={yash_sir} email={"yash_agrawal@dau.ac.in"} title={"Associate Professor"}  />
+          
+        </div>
+      </section>
+          {/* <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm text-gray-700">
             <div>
               <p className="font-medium">Saurabh Tiwari</p>
               <p>Associate Professor</p>
-              <a href="mailto:saurabh_t@daiict.ac.in" className="text-blue-600 underline">
+              <a
+                href="mailto:saurabh_t@daiict.ac.in"
+                className="text-blue-600 underline"
+              >
                 saurabh_t@daiict.ac.in
               </a>
             </div>
@@ -169,7 +182,7 @@ Accommodation Scholarship: ${formData.scholarship}`
                 yash_agrawal@daiict.ac.in
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

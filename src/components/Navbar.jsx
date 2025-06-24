@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,25 +19,32 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-2xl font-bold text-blue-600">AISE</div>
+        <div className="text-2xl font-bold text-blue-600">
+          <a href="/">
+            <img src={logo} alt="logo" className="h-16 w-32" />
+          </a>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          {navLinks.map((link) => (
-            link.href === "Hackathon"
-            ?
-            <Link to={link.href} className="text-gray-700 hover:text-blue-500 transition">
-              {link.label}
-            </Link>
-            :
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-gray-700 hover:text-blue-500 transition"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href === "Hackathon" ? (
+              <Link
+                to={link.href}
+                className="text-gray-700 hover:text-blue-500 transition"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-blue-500 transition"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </div>
 
         {/* Mobile Toggle */}

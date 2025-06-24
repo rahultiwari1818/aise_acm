@@ -12,7 +12,7 @@ export default function AboutCity() {
         <SectionHeader title={"About Gandhinagar"}/>
         
 
-      <div className="text-gray-600 max-w-4xl mx-auto space-y-6 px-4 text-justify">
+      <div className="text-gray-600 max-w-7xl mx-auto space-y-6 px-4 text-justify">
         <p>
           The host institution is located in Gujarat, a western state of India.
           Gandhinagar is the capital city of Gujarat and was created as a modern twin
