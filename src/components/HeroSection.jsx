@@ -1,72 +1,23 @@
 "use client";
 
-// const codeSnippets = [
-//   {
-//     text: `from agent_framework import ReasoningAgent
+import { Link } from "react-router-dom";
 
-// class CodeReviewAgent:
-//     def analyze_pr(self, diff):
-//         issues = self.detect_patterns(diff)
-//         suggestions = self.suggest_improvements()
-//         return self.format_review(issues, suggestions)`,
-//     top: "20%",
-//     left: "5%",
-//   },
-//   {
-//     text: `const agent = new SoftwareAgent({
-//   codeGeneration: true,
-//   testing: true,
-//   debugging: true
-// });
-// await agent.processRequirements(userStory);`,
-//     top: "15%",
-//     left: "70%",
-//   },
-//   {
-//     text: `async function orchestrateAgents() {
-//   const swarm = new AgentSwarm();
-//   return await swarm.collaborate(complexTask);
-// }`,
-//     top: "65%",
-//     left: "10%",
-//   },
-//   {
-//     text: `interface AgentOrchestrator {
-//   delegate(task: Task): Promise<AgentResult>;
-//   coordinate(agents: Agent[]): Workflow;
-//   monitor(execution: ExecutionContext): void;
-// }`,
-//     top: "60%",
-//     left: "75%",
-//   },
-// ];
+// Uncomment this if you use motion animations
+// import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen hero-section-bg text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
 
-      {/* Background Animated Code */}
-      {/* {codeSnippets.map((snippet, idx) => (
-        <motion.pre
-          key={idx}
-          initial={{ opacity: 0.5, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 8 + idx,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-          className="absolute font-mono text-sm whitespace-pre-wrap z-0 pointer-events-none blur-sm"
-          style={{
-            top: snippet.top,
-            left: snippet.left,
-            width: "300px",
-          }}
+      {/* 🔔 Pre-Event Hackathon Announcement Button */}
+      <div className="absolute top-4 right-10 z-20">
+        <Link
+          to="/hackathon"
+          className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition"
         >
-          {snippet.text}
-        </motion.pre>
-      ))} */}
+          ⚡ Pre-Event Hackathon – Apply Now
+        </Link>
+      </div>
 
       {/* Tag */}
       <div className="relative z-10 text-sm bg-indigo-600 px-4 py-1 rounded-full font-semibold mb-4">
@@ -78,10 +29,6 @@ export default function HeroSection() {
         Winter School on AI-Infused Software Engineering
         <br />
         <span className="text-yellow-400">Research and Practice</span>
-        <br />
-        {/* <span className="text-2xl font-medium text-gray-200">
-          for Software Engineering
-        </span> */}
       </h1>
 
       {/* Subtitle */}
@@ -95,7 +42,7 @@ export default function HeroSection() {
           📅 7-10 January
         </span>
         <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
-          📍 Dhirubhai Ambani University , Gandhinagar
+          📍 Dhirubhai Ambani University, Gandhinagar
         </span>
         <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
           🧑‍🤝‍🧑 In-Person Event
@@ -104,7 +51,12 @@ export default function HeroSection() {
 
       {/* Feature Tags */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-xs font-medium">
-        {["AI-Powered Learning", "Expert Speakers", "Hands-on Sessions", "Grants"].map((item) => (
+        {[
+          "AI-Powered Learning",
+          "Expert Speakers",
+          "Hands-on Sessions",
+          "Grants",
+        ].map((item) => (
           <span
             key={item}
             className="bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition"
@@ -114,7 +66,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* CTA Buttons */}
+      {/* CTA Button */}
       <div className="relative z-10 mt-8 flex flex-wrap justify-center gap-4">
         <a
           href="#Registration"
