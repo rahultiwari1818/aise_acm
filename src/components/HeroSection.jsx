@@ -15,7 +15,7 @@ export default function HeroSection() {
           <Link to="/hackathon" className="block text-black hover:underline">
             ⚡ Pre-Event Hackathon – Apply Now
           </Link>
-          <p className="text-xs font-normal mt-1">📅 5th–6th Jan 2026</p>
+          <p className="text-xs font-normal mt-1">📅 5 - 6 January 2026</p>
         </div>
       </div>
 
