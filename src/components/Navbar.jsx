@@ -10,7 +10,7 @@ export default function Navbar() {
     { label: "About", href: "/#about" },
     { label: "Program", href: "/#agenda" },
     { label: "Organizers", href: "/#Speakers" },
-    { label: "Speakers", href: "/#Speakers" },
+    // { label: "Speakers", href: "/#Speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
     { label: "Grant", href: "/#Grant" },
