@@ -41,6 +41,9 @@ const RegistrationForm = () => {
         <p className="text-center text-blue-600 font-medium mb-6">
           🔧 Join the Future of Software Engineering
         </p>
+        <p className="text-center  text-blue-600 font-medium mb-6">
+          * Registration fees is refundable to all school participants.
+        </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 text-sm sm:text-base">
           <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">

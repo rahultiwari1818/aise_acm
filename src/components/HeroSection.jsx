@@ -37,13 +37,13 @@ export default function HeroSection() {
 
       {/* Info Badges */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-sm font-medium">
-        <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
+        <span className="bg-white/90 text-black px-4 py-2 rounded-full flex items-center gap-2">
           📅 7-10 January
         </span>
-        <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
+        <span className="bg-white/90 text-black px-4 py-2 rounded-full flex items-center gap-2">
           📍 Dhirubhai Ambani University, Gandhinagar
         </span>
-        <span className="bg-white/10 px-4 py-2 rounded-full flex items-center gap-2">
+        <span className="bg-white/90 text-black px-4 py-2 rounded-full flex items-center gap-2">
           🧑‍🤝‍🧑 In-Person Event
         </span>
       </div>
