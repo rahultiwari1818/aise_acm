@@ -104,7 +104,7 @@ export default function Accommodation() {
         <p><strong>📍 Location:</strong> {acc.female_faculty.location}</p>
         <p><strong>💰 Charges:</strong> {acc.female_faculty.charges}</p>
         <p><strong>📢 Notification:</strong> {acc.female_faculty.notification}</p>
-        <p><strong>✅ Action Required:</strong> {acc.female_faculty.action_required}</p>
+        {/* <p><strong>✅ Action Required:</strong> {acc.female_faculty.action_required}</p> */}
         <p>
           <a
             href="#"
@@ -112,7 +112,7 @@ export default function Accommodation() {
             rel="noopener noreferrer"
             className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
           >
-            Fill Accommodation Request Form
+            Form will be available soon
           </a>
         </p>
       </div>
@@ -123,7 +123,7 @@ export default function Accommodation() {
         <p><strong>📍 Location:</strong> {acc.male_faculty.location}</p>
         <p><strong>💰 Charges:</strong> {acc.male_faculty.charges}</p>
         <p><strong>📢 Notification:</strong> {acc.male_faculty.notification}</p>
-        <p><strong>✅ Action Required:</strong> {acc.male_faculty.action_required}</p>
+        {/* <p><strong>✅ Action Required:</strong> {acc.male_faculty.action_required}</p> */}
         <p>
           <a
             href="#"
@@ -131,7 +131,7 @@ export default function Accommodation() {
             rel="noopener noreferrer"
             className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
           >
-            Fill Accommodation Request Form
+            Form will be available soon
           </a>
         </p>
       </div>
@@ -149,13 +149,13 @@ export default function Accommodation() {
             className="text-yellow-800 underline"
           >
 
-            View Recommended Hotels
+            Details will be available soon.
           </a>
         </p>
       </div>
 
       {/* INFLIBNET Option */}
-      <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+      {/* <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
         <h3 className="text-md font-semibold text-blue-700 mb-2">🏠 Other Option: INFLIBNET Guest House</h3>
         <p><strong>🌐 Website:</strong> <a href={acc.other_options.INFLIBNET.website} className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Visit</a></p>
         <p><strong>📍 Address:</strong> {acc.other_options.INFLIBNET.address}</p>
@@ -166,7 +166,7 @@ export default function Accommodation() {
             <li key={idx}>{item}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 }

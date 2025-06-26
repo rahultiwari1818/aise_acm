@@ -13,19 +13,19 @@ export default function TravelGrants() {
 
       {/* Form Button */}
       <div className="text-center my-6">
-        <a
+        {/* <a
           href={travelGrants.formLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-600 hover:text-white transition"
         >
           Fill the Form
-        </a>
+        </a> */}
       </div>
 
       {/* Coverage */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold text-indigo-700 mb-2">📋 Grant Coverage</h3>
+        <h3 className="text-xl font-semibold text-indigo-700 mb-2">📋 Grant Coverage for Student Participants </h3>
         <ul className="list-disc pl-6 text-gray-700 space-y-1">
           {travelGrants.coverage.map((point, index) => (
             <li key={index}>{point}</li>
@@ -51,14 +51,14 @@ export default function TravelGrants() {
 
       {/* Registration Button */}
       <div className="text-center my-6">
-        <a
+        {/* <a
           href={travelGrants.registrationLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-600 hover:text-white transition"
         >
           Visit the Registration Page
-        </a>
+        </a> */}
       </div>
 
       {/* Note Section */}

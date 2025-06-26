@@ -5,10 +5,19 @@ import santosh_sir from "../assets/speakers/santosh_singh.jpg";
 import sridhar_sir from "../assets/speakers/sridhar_chimalakonda.jpeg";
 import saurabh_sir from "../assets/speakers/saurabh_tiwari.jpg";
 import default_pic from "../assets/speakers/default.jpg";
+import sudkshina_maam from "../assets/speakers/sudakshina_maam.jpg";
 
 
 const data = {
   "speakers": [
+    {
+      "name": "Saurabh Tiwari",
+      "email": "",
+      "institution": "DAU Gandhinagar, India",
+      "topic": "To be updated",
+      "bio": "",
+      "image": saurabh_sir
+    },
     {
       "name": "Santosh Singh Rathore",
       "email": "",
@@ -41,22 +50,23 @@ const data = {
       "bio": "",
       "image": meenakshi_maam
     },
+    
     {
-      "name": "Saurabh Tiwari",
+      "name": "Sudakshina Dutta ",
       "email": "",
-      "institution": "DAU Gandhinagar, India",
+      "institution": "IIT Goa, India",
       "topic": "To be updated",
       "bio": "",
-      "image": saurabh_sir
+      "image": sudkshina_maam
     },
-    {
-      "name": "",
-      "email": "",
-      "institution": "New Speakers to be added soon.",
-      "topic": "To be updated",
-      "bio": "",
-      "image": default_pic
-    },
+    // {
+    //   "name": "",
+    //   "email": "",
+    //   "institution": "New Speakers to be added soon.",
+    //   "topic": "To be updated",
+    //   "bio": "",
+    //   "image": default_pic
+    // },
     
   ]
 };

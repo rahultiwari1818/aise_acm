@@ -26,13 +26,13 @@ export default function Home() {
           <About />
         </section>
 
-        <section
+        {/* <section
           id="agenda"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 py-5 bg-gray-100 shadow-2xl"
         >
           <Agenda />
 
-        </section>
+        </section> */}
 
         <section
           id="Speakers"
@@ -76,18 +76,20 @@ export default function Home() {
         </section>
 
         <section
+          id="Registration"
+          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
+        >
+          <RegistrationForm />
+        </section>
+
+        <section
           id="Grant"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
             <TravelGrants/>
         </section>
 
-        <section
-          id="Registration"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
-        >
-          <RegistrationForm />
-        </section>
+
 
         <section
           id="Sponsors"

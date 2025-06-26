@@ -2,21 +2,20 @@
 
 import { Link } from "react-router-dom";
 
-// Uncomment this if you use motion animations
-// import { motion } from "framer-motion";
-
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen hero-section-bg text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
+    <section className="relative min-h-screen  hero-section-bg   text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
+
+
 
       {/* 🔔 Pre-Event Hackathon Announcement Button */}
-      <div className="absolute top-4 right-10 z-20">
-        <Link
-          to="/hackathon"
-          className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition"
-        >
-          ⚡ Pre-Event Hackathon – Apply Now
-        </Link>
+      <div className="absolute top-4 right-10 z-20 text-right">
+        <div className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition">
+          <Link to="/hackathon" className="block text-black hover:underline">
+            ⚡ Pre-Event Hackathon – Apply Now
+          </Link>
+          <p className="text-xs font-normal mt-1">📅 5th–6th Jan 2026</p>
+        </div>
       </div>
 
       {/* Tag */}

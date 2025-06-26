@@ -8,11 +8,12 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/#about" },
-    { label: "Agenda", href: "/#agenda" },
+    { label: "Program", href: "/#agenda" },
+    { label: "Organizers", href: "/#Speakers" },
     { label: "Speakers", href: "/#Speakers" },
     { label: "Venue", href: "/#Venue" },
-    { label: "Grant", href: "/#Grant" },
     { label: "Registration", href: "/#Registration" },
+    { label: "Grant", href: "/#Grant" },
     { label: "Hackathon", href: "/hackathon" },
   ];
 

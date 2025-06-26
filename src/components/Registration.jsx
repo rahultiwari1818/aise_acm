@@ -3,6 +3,7 @@ import SectionHeader from "./sub-components/SectionHeader";
 import ChairCard from "./sub-components/Chair";
 import saurabh_sir from "../assets/chairs/saurabh_tiwari.jpg";
 import yash_sir from "../assets/chairs/yash_agarwal.jpg";
+import RegistrationFeeAndNotes from "./sub-components/RegistrationFeeAndNotes";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,9 @@ Accommodation Scholarship: ${formData.scholarship}`
           send the email to complete your registration.
         </div> */}
 
-        <form className="grid grid-cols-1 gap-4">
+        <RegistrationFeeAndNotes/>
+
+        {/* <form className="grid grid-cols-1 gap-4">
           <input
             name="fullName"
             value={formData.fullName}
@@ -130,7 +133,7 @@ Accommodation Scholarship: ${formData.scholarship}`
             rows={4}
             className="input"
           />
-          {/* <select
+          <select
             name="scholarship"
             value={formData.scholarship}
             onChange={handleChange}
@@ -140,21 +143,23 @@ Accommodation Scholarship: ${formData.scholarship}`
             <option value="">Select an option</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
-          </select> */}
-        </form>
+          </select>
 
-        <button
+          
+        </form> */}
+
+        {/* <button
           onClick={handleSubmit}
           className="w-full mt-6 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
         >
           🚀 Submit Registration
-        </button>
+        </button> */}
 
         <div className="mt-10 text-center">
           <h2 className="text-xl font-semibold mb-2">
-            👥 Contact the Organizers
+            👥 Contact us
           </h2>
-           <section className="mt-20">
+           <section className="mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ChairCard bio={""} name={"Saurabh Tiwari"} image={saurabh_sir}  email={"saurabh_t@dau.ac.in"} title={"Associate Professor"}/>
             <ChairCard bio={""} name={"Yash Agrawal"} image={yash_sir} email={"yash_agrawal@dau.ac.in"} title={"Associate Professor"}  />
