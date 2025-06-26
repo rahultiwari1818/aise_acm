@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function RegistrationFeeAndNotes() {
   const notes = [
@@ -7,7 +8,7 @@ export default function RegistrationFeeAndNotes() {
     "A participation certificate will be awarded to individuals with full attendance across all four days.",
     "You may also register for the pre-event hackathon to be held on 5th and 6th January 2026 at DAU.",
     "Accommodation will be provided in university campus hostels at no additional cost.",
-    "For more details, visit the Hackathon page.",
+    // "For more details, visit the Hackathon page.",
   ];
 
   return (
@@ -67,6 +68,16 @@ export default function RegistrationFeeAndNotes() {
           {notes.map((note, index) => (
             <li key={index} className="">{note}</li>
           ))}
+          <li>
+            For more details, visit the{" "}
+            <Link
+              to="/hackathon"
+              className="text-indigo-700 underline font-medium hover:text-indigo-900"
+            >
+              Hackathon page
+            </Link>
+            .
+          </li>
         </ul>
       </div>
     </div>

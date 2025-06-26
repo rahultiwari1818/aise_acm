@@ -4,7 +4,7 @@ import meenakshi_maam from "../assets/speakers/meenakshi_d_souza.jpg";
 import santosh_sir from "../assets/speakers/santosh_singh.jpg";
 import sridhar_sir from "../assets/speakers/sridhar_chimalakonda.jpeg";
 import saurabh_sir from "../assets/speakers/saurabh_tiwari.jpg";
-import default_pic from "../assets/speakers/default.jpg";
+// import default_pic from "../assets/speakers/default.jpg";
 import sudkshina_maam from "../assets/speakers/sudakshina_maam.jpg";
 
 

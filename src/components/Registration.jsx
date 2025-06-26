@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SectionHeader from "./sub-components/SectionHeader";
 import ChairCard from "./sub-components/Chair";
 import saurabh_sir from "../assets/chairs/saurabh_tiwari.jpg";
@@ -6,34 +5,34 @@ import yash_sir from "../assets/chairs/yash_agarwal.jpg";
 import RegistrationFeeAndNotes from "./sub-components/RegistrationFeeAndNotes";
 
 const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    institution: "",
-    country: "",
-    position: "",
-    education: "",
-    motivation: "",
-    scholarship: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   fullName: "",
+  //   email: "",
+  //   institution: "",
+  //   country: "",
+  //   position: "",
+  //   education: "",
+  //   motivation: "",
+  //   scholarship: "",
+  // });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
 
-  const handleSubmit = () => {
-    const mailto = `mailto:chemacm@unex.es?subject=Registration&body=${encodeURIComponent(
-      `Full Name: ${formData.fullName}
-Email: ${formData.email}
-Institution: ${formData.institution}
-Country: ${formData.country}
-Position: ${formData.position}
-Highest Level of Education: ${formData.education}
-Motivation: ${formData.motivation}
-Accommodation Scholarship: ${formData.scholarship}`
-    )}`;
-    window.location.href = mailto;
-  };
+//   const handleSubmit = () => {
+//     const mailto = `mailto:chemacm@unex.es?subject=Registration&body=${encodeURIComponent(
+//       `Full Name: ${formData.fullName}
+// Email: ${formData.email}
+// Institution: ${formData.institution}
+// Country: ${formData.country}
+// Position: ${formData.position}
+// Highest Level of Education: ${formData.education}
+// Motivation: ${formData.motivation}
+// Accommodation Scholarship: ${formData.scholarship}`
+//     )}`;
+//     window.location.href = mailto;
+//   };
 
   return (
     <div className="min-h-screen px-4 py-8  text-black">
