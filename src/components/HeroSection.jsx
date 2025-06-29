@@ -1,37 +1,7 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import loaderIcon from "../assets/logo.png"; // <-- Replace with your actual icon path
 
 export default function HeroSection() {
-  const [loading, setLoading] = useState(true);
-
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
-  useEffect(() => {
-
-    handleLoad();
-    // Listen for window load event
-    // window.addEventListener("load", handleLoad);
-
-    // // Clean up
-    // return () => window.removeEventListener("load", handleLoad);
-  }, []);
-
-
-
-  if (loading) {
-    return (
-      <div className="fixed h-screen w-screen inset-0 flex items-center justify-center bg-white z-50">
-        <img
-          src={loaderIcon}
-          alt="Loading..."
-          className="h-24 w-36 animate-pulse"
-        />
-      </div>
-    );
-  }
+  
 
   return (
     <section className="relative min-h-screen hero-section-bg text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
