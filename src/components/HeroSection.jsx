@@ -1,16 +1,43 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Particle from "./sub-components/Particle/Particle";
+import loaderIcon from "../Assets/logo.png"; // <-- Replace with your actual icon path
 
 export default function HeroSection() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    // Listen for window load event
+    window.addEventListener("load", handleLoad);
+
+    // Clean up
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed h-screen w-screen inset-0 flex items-center justify-center bg-white z-50">
+        <img
+          src={loaderIcon}
+          alt="Loading..."
+          className="h-24 w-36 animate-pulse"
+        />
+      </div>
+    );
+  }
+
   return (
     <section className="relative min-h-screen hero-section-bg text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
       {/* Background Particles */}
       {/* <Particle /> */}
 
       {/* 🔔 Pre-Event Hackathon Announcement Button */}
-      <div className="absolute top-4 right-10 z-20 text-right">
+      <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
         <div className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition">
           <Link to="/hackathon" className="block text-black hover:underline">
             ⚡ Pre-Event Hackathon – Apply Now
@@ -20,7 +47,7 @@ export default function HeroSection() {
       </div>
 
       {/* Tag */}
-      <div className="relative z-10 text-sm bg-indigo-600 px-4 py-1 rounded-full font-semibold mb-4">
+      <div className="relative z-10 text-sm bg-indigo-600 px-4 py-1 rounded-full font-semibold my-10 md:my-6 lg:my-4">
         1st EDITION
       </div>
 
@@ -51,12 +78,7 @@ export default function HeroSection() {
 
       {/* Feature Tags */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-xs font-medium">
-        {[
-          "AI-Powered Learning",
-          "Expert Speakers",
-          "Hands-on Sessions",
-          "Grants",
-        ].map((item) => (
+        {["AI-Powered Learning", "Expert Speakers", "Hands-on Sessions", "Grants"].map((item) => (
           <span
             key={item}
             className="bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition"
