@@ -16,12 +16,13 @@ function App() {
   };
 
   useEffect(() => {
+    handleLoad();
 
     // Listen for window load event
-    window.addEventListener("load", handleLoad);
+    // window.addEventListener("load", handleLoad);
 
-    // // Clean up
-    return () => window.removeEventListener("load", handleLoad);
+    // // // Clean up
+    // return () => window.removeEventListener("load", handleLoad);/
   }, []);
 
 
