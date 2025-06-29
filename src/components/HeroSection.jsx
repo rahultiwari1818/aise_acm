@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import loaderIcon from "../assets/logo.png"; // <-- Replace with your actual icon path
@@ -7,17 +5,21 @@ import loaderIcon from "../assets/logo.png"; // <-- Replace with your actual ico
 export default function HeroSection() {
   const [loading, setLoading] = useState(true);
 
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
 
+    handleLoad();
     // Listen for window load event
-    window.addEventListener("load", handleLoad);
+    // window.addEventListener("load", handleLoad);
 
-    // Clean up
-    return () => window.removeEventListener("load", handleLoad);
+    // // Clean up
+    // return () => window.removeEventListener("load", handleLoad);
   }, []);
+
+
 
   if (loading) {
     return (
