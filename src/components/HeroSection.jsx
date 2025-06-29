@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import loaderIcon from "../Assets/logo.png"; // <-- Replace with your actual icon path
+import loaderIcon from "../assets/logo.png"; // <-- Replace with your actual icon path
 
 export default function HeroSection() {
   const [loading, setLoading] = useState(true);
