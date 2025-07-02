@@ -4,7 +4,7 @@ const travelGrants = {
   email: "saurabh_t@dau.ac.in",
 
   coverage: [
-    "Travel expenses up to ₹4,000 against receipts.",
+    "Travel expenses up to ₹3,000 against receipts.",
     "Admissible: Bus, Train (up to AC 2 tier), or Economy class flight.",
     "Travel should be from and to the partipants city."
   ],

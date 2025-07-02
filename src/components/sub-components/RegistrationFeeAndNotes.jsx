@@ -6,7 +6,7 @@ export default function RegistrationFeeAndNotes() {
     "The registration fee for all school participants will be reimbursed after attending the school, provided they attend all four days.",
     "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
     "A participation certificate will be awarded to individuals with full attendance across all four days.",
-    "You may also register for the pre-event hackathon on January 5 and 6, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
+    "You may also register for the pre-event hackathon on January 5 to 7, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
     // "Accommodation will be provided in university campus hostels at no additional cost.",
     // "For more details, visit the Hackathon page.",
   ];

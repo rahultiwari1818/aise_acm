@@ -13,7 +13,9 @@ export default function Navbar() {
     // { label: "Speakers", href: "/#Speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
+    { label: "5 MRT", href: "/5mrt" },
     { label: "Grant", href: "/#Grant" },
+    { label: "Industry Showcase", href: "/industry-showcase" },
     { label: "Hackathon", href: "/hackathon" },
   ];
 
