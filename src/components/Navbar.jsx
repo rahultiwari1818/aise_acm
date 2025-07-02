@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/#about" },
     { label: "Program", href: "/#agenda" },
     { label: "Organizers", href: "/#Speakers" },
-    // { label: "Speakers", href: "/#Speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
     { label: "5 MRT", href: "/5mrt" },
@@ -18,6 +18,20 @@ export default function Navbar() {
     { label: "Industry Showcase", href: "/industry-showcase" },
     { label: "Hackathon", href: "/hackathon" },
   ];
+
+  const handleHashNavigation = (href) => {
+    const [path, hash] = href.split("#");
+    navigate(path || "/");
+
+    setTimeout(() => {
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }, 100); // slight delay to ensure content is mounted
+  };
 
   return (
     <nav className="bg-white shadow-md fixed top-0 w-full z-50">
@@ -30,26 +44,47 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          {navLinks.map((link) =>
-            link.href === "Hackathon" ? (
-              <Link
-                to={link.href}
-                className="text-gray-700 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
-                 transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-700  hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
-                 transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1 rounded-2xl p-2"
-              >
-                {link.label}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => {
+            if (link.href.includes("#")) {
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleHashNavigation(link.href);
+                  }}
+                  className="text-gray-700 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
+                  transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1 rounded-2xl p-2"
+                >
+                  {link.label}
+                </button>
+              );
+            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase") {
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
+                  transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1 rounded-2xl p-2"
+                >
+                  {link.label}
+                </Link>
+              );
+            } else {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
+                  transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1 rounded-2xl p-2"
+                >
+                  {link.label}
+                </a>
+              );
+            }
+          })}
         </div>
 
         {/* Mobile Toggle */}
@@ -85,16 +120,44 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white px-4 pb-4 shadow-md">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-gray-700 hover:text-blue-500 transition"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            if (link.href.includes("#")) {
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleHashNavigation(link.href);
+                  }}
+                  className="block w-full text-left py-2 text-gray-700 hover:text-blue-500 transition"
+                >
+                  {link.label}
+                </button>
+              );
+            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase") {
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-2 text-gray-700 hover:text-blue-500 transition"
+                >
+                  {link.label}
+                </Link>
+              );
+            } else {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-2 text-gray-700 hover:text-blue-500 transition"
+                >
+                  {link.label}
+                </a>
+              );
+            }
+          })}
         </div>
       )}
     </nav>
