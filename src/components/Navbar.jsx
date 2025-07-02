@@ -34,7 +34,8 @@ export default function Navbar() {
             link.href === "Hackathon" ? (
               <Link
                 to={link.href}
-                className="text-gray-700 hover:text-blue-500 transition"
+                className="text-gray-700 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
+                 transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1"
               >
                 {link.label}
               </Link>
@@ -42,7 +43,8 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-500 transition"
+                className="text-gray-700  hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01] 
+                 transition-all duration-300 hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-1 rounded-2xl p-2"
               >
                 {link.label}
               </a>

@@ -7,7 +7,7 @@ import AboutCity from "../components/AboutCity";
 import Accommodation from "../components/Accomodation";
 import RegistrationForm from "../components/Registration";
 import TravelGrants from "../components/TravelGrants";
-import Sponsors from "../components/TargetAudience";
+import Sponsors from "../components/Sponsors";
 
 
 
