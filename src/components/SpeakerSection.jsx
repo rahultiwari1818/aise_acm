@@ -1,5 +1,5 @@
 import SpeakerCard from "./sub-components/Speakers";
-import speakerData from "../data/speaker";
+import speakerData from "../data/organizers";
 import SectionHeader from "./sub-components/SectionHeader";
 
 export default function SpeakerSection() {

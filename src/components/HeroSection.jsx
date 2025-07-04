@@ -31,11 +31,11 @@ export default function HeroSection() {
           emulateTouch={false}
         >
           {images.map((src, idx) => (
-            <div key={idx}>
+            <div key={idx} className="h-[120vh] md:h-screen w-full">
               <img
                 src={src}
                 alt={`Slide ${idx + 1}`}
-                className="w-full h-screen object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}

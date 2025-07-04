@@ -8,9 +8,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/#about" },
+    // { label: "About", href: "/#about" },
     { label: "Program", href: "/#agenda" },
     { label: "Organizers", href: "/#Speakers" },
+    { label: "Speakers", href: "/speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
     { label: "5 MRT", href: "/5mrt" },
@@ -43,7 +44,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden lg:flex space-x-6">
           {navLinks.map((link) => {
             if (link.href.includes("#")) {
               return (
@@ -89,7 +90,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-gray-700 focus:outline-none"
+          className="lg:hidden text-gray-700 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -119,7 +120,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 pb-4 shadow-md">
+        <div className="lg:hidden bg-white px-4 pb-4 shadow-md">
           {navLinks.map((link) => {
             if (link.href.includes("#")) {
               return (
