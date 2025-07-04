@@ -59,9 +59,9 @@ export default function RegistrationFeeAndNotes() {
         <p className="text-right w-fit py-4 text-sm italic text-gray-700">
           * GST may be applicable on registration fees (to be confirmed later).
         </p>
-        <p className="text-right w-fit  text-sm italic text-gray-700">
+        {/* <p className="text-right w-fit  text-sm italic text-gray-700">
           * Registration fees is refundable to all school participants.
-        </p>
+        </p> */}
         <p>
           <a
             href="#"

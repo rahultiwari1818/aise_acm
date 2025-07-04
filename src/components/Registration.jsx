@@ -41,9 +41,9 @@ const RegistrationForm = () => {
         {/* <p className="text-center text-blue-600 font-medium mb-6">
           🔧 Join the Future of Software Engineering
         </p> */}
-        <p className="text-center  text-blue-600 font-medium mb-6">
+        {/* <p className="text-center  text-blue-600 font-medium mb-6">
           * Registration fees is refundable to all school participants.
-        </p>
+        </p> */}
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 text-sm sm:text-base">
           <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
@@ -163,8 +163,8 @@ const RegistrationForm = () => {
           </h2>
            <section className="mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ChairCard bio={""} name={"Saurabh Tiwari"} image={saurabh_sir}  email={"saurabh_t@dau.ac.in"} title={""}/>
-            <ChairCard bio={""} name={"Yash Agrawal"} image={yash_sir} email={"yash_agrawal@dau.ac.in"} title={""}  />
+            <ChairCard bio={""} name={"Saurabh Tiwari"} image={saurabh_sir}  email={"saurabh_t@dau.ac.in"} phno={"+918224009398"}/>
+            <ChairCard bio={""} name={"Yash Agrawal"} image={yash_sir} email={"yash_agrawal@dau.ac.in"} phno={" +919882114669"}  />
           
         </div>
       </section>
