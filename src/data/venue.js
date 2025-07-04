@@ -4,8 +4,7 @@ const data = {
     "title": "Location",
     "heading": "Dhirubhai Ambani University",
     "lines": [
-       
-      "Dhirubhai Ambani University,",
+      "(Formerly DA-IICT)",
       "Near Indroda Circle,",
       "Gandhinagar (382 007), Gujarat (India)"
     ]

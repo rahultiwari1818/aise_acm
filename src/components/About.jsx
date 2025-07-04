@@ -21,8 +21,15 @@ export default function About() {
         <h4 className="text-2xl md:text-3xl font-bold text-indigo-700">
           {aboutJson.subTitle}
         </h4>
-        
+
         <p className="text-sm text-gray-500 italic">{aboutJson.eventCode}</p>
+        <div className="text-indigo-700 font-bold px-4 py-2 rounded-full flex flex-col items-center justify-between gap-2">
+          <h3 className="text-base">
+            📍 Dhirubhai Ambani University, Gandhinagar
+          </h3>
+          <h6 className="">(Formely DA-IICT)</h6>
+          <h6 className="">7 - 10 January , 2026</h6>
+        </div>
       </div>
 
       {/* Key Topics */}

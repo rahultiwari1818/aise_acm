@@ -9,10 +9,9 @@ import image2 from "../assets/DSC_9701.jpg";
 import image3 from "../assets/homepage.jpg";
 import image4 from "../assets/DSC_1059.jpg";
 
-
 export default function HeroSection() {
   // Example images
-  const images = [image3,image1, image2,image4];
+  const images = [image3, image1, image2, image4];
 
   return (
     <section className="relative min-h-screen text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
@@ -74,15 +73,16 @@ export default function HeroSection() {
 
       {/* Info Badges */}
       <div className="relative z-10 mt-6 flex flex-wrap justify-center gap-3 text-sm font-medium">
-        <span className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
+        <div className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
           📅 7–10 January
-        </span>
-        <span className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
-          📍 Dhirubhai Ambani University, Gandhinagar
-        </span>
-        <span className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
+        </div>
+        <div className="bg-white/10 text-white px-4 py-2 rounded-full flex flex-col items-center justify-between gap-2">
+          <p className="text-base">📍 Dhirubhai Ambani University, Gandhinagar</p>
+          <span className="text-xs">(Formerly DA-IICT)</span>
+        </div>
+        <div className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
           🧑‍🤝‍🧑 In-Person Event
-        </span>
+        </div>
       </div>
 
       {/* Feature Tags */}
