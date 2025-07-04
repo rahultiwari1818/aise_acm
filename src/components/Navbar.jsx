@@ -10,7 +10,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     // { label: "About", href: "/#about" },
     { label: "Program", href: "/#agenda" },
-    { label: "Organizers", href: "/#Speakers" },
+    { label: "Organizers", href: "/#organizers" },
     { label: "Speakers", href: "/speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
@@ -60,7 +60,7 @@ export default function Navbar() {
                   {link.label}
                 </button>
               );
-            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase") {
+            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase"|| link.href === "/speakers") {
               return (
                 <Link
                   key={link.href}
@@ -135,7 +135,7 @@ export default function Navbar() {
                   {link.label}
                 </button>
               );
-            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase") {
+            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase" || link.href === "/speakers") {
               return (
                 <Link
                   key={link.href}

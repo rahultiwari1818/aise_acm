@@ -37,7 +37,7 @@ export default function Home() {
         </section> */}
 
         <section
-          id="Speakers"
+          id="organizers"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <SpeakerSection />
