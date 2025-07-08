@@ -3,12 +3,16 @@ import SectionHeader from "./sub-components/SectionHeader";
 
 export default function TravelGrants() {
   return (
-    <section id="TravelGrants" className="px-4 py-12 md:px-12 max-w-7xl mx-auto">
+    <section
+      id="TravelGrants"
+      className="px-4 py-12 md:px-12 max-w-7xl mx-auto"
+    >
       <SectionHeader title={"Travel Grants"} />
 
-      <p className="text-gray-700 mb-6 text-center max-w-5xl mx-auto">
-        AISE 2026 are pleased to announce the travel and registration grant for participants to attend the winter school. 
-        This initiative supports outstation students from Indian technical institutions to participate in the school.
+      <p className="text-gray-700 mb-6  max-w-5xl mx-auto text-justify">
+        AISE 2026 aims to provide travel grants to student participants for
+        attending the school, subject to the availability of funds. Confirmation
+        of the travel grant availability will be provided at a later date.
       </p>
 
       {/* Form Button */}
@@ -24,14 +28,18 @@ export default function TravelGrants() {
       </div>
 
       {/* Coverage */}
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold text-indigo-700 mb-2">📋 Grant Coverage for Student Participants </h3>
+
+
+      {/* <div className="mb-8">
+        <h3 className="text-xl font-semibold text-indigo-700 mb-2">
+          📋 Grant Coverage for Student Participants{" "}
+        </h3>
         <ul className="list-disc pl-6 text-gray-700 space-y-1">
           {travelGrants.coverage.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Volunteering Note */}
       {/* <div className="bg-yellow-50 border border-yellow-200 text-yellow-900 p-4 rounded mb-8">
@@ -40,14 +48,16 @@ export default function TravelGrants() {
       </div> */}
 
       {/* Eligibility */}
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold text-indigo-700 mb-2">✅ Eligibility Criteria: for students</h3>
+      {/* <div className="mb-8">
+        <h3 className="text-xl font-semibold text-indigo-700 mb-2">
+          ✅ Eligibility Criteria: for students
+        </h3>
         <ul className="list-disc pl-6 text-gray-700 space-y-1">
           {travelGrants.eligibility.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Registration Button */}
       <div className="text-center my-6">
@@ -62,14 +72,16 @@ export default function TravelGrants() {
       </div>
 
       {/* Note Section */}
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold text-indigo-700 mb-2">📌 Note for School Participants</h3>
+      {/* <div className="mb-8">
+        <h3 className="text-xl font-semibold text-indigo-700 mb-2">
+          📌 Note for School Participants
+        </h3>
         <ul className="list-disc pl-6 text-gray-700 space-y-1">
           {travelGrants.notes.map((note, index) => (
             <li key={index}>{note}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Contact */}
       <div className="bg-gray-50 border border-gray-200 p-4 rounded text-gray-700">

@@ -80,9 +80,17 @@ export default function RegistrationFeeAndNotes() {
           Important Notes:
         </h3>
         <ul className="list-disc text-sm text-gray-800 space-y-2 pl-4 text-justify ">
-          {notes.map((note, index) => (
-            <li key={index}>{note}</li>
-          ))}
+          {notes.map((note, index) => {
+            if (index === 0) {
+              return (
+                <li key={index} className="font-bold">
+                  {note}
+                </li>
+              );
+            } else {
+              return <li key={index}>{note}</li>;
+            }
+          })}
           <li>
             For more details, visit the{" "}
             <Link
