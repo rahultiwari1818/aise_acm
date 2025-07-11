@@ -45,12 +45,30 @@ export default function HeroSection() {
       </div>
 
       {/* Pre-Event Hackathon Announcement Button */}
-      <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
+      {/* <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
         <div className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition">
           <Link to="/hackathon" className="block text-black hover:underline">
             ⚡ Pre-Event Hackathon – Apply Now
           </Link>
           <p className="text-xs font-normal mt-1">📅 5 - 7 January 2026</p>
+        </div>
+      </div> */}
+
+      <div className="absolute top-4 right-4 md:right-10 z-20 text-right">
+        <div
+          className="
+      bg-gradient-to-r from-yellow-300 to-yellow-500 text-black 
+      px-5 py-3 rounded-full shadow-xl 
+      hover:from-yellow-400 hover:to-yellow-600 
+      transition-all duration-300 ease-in-out
+    "
+        >
+          <p className="text-sm md:text-base font-extrabold uppercase tracking-wide">
+            ⚡ 3-Day Hackathon Event
+          </p>
+          <p className="text-xs md:text-sm mt-1 italic font-medium">
+            (Stay tuned for dates; coming soon...)
+          </p>
         </div>
       </div>
 
@@ -77,7 +95,9 @@ export default function HeroSection() {
           📅 7–10 January
         </div>
         <div className="bg-white/10 text-white px-4 py-2 rounded-full flex flex-col items-center justify-between gap-2">
-          <p className="text-base">📍 Dhirubhai Ambani University, Gandhinagar</p>
+          <p className="text-base">
+            📍 Dhirubhai Ambani University, Gandhinagar
+          </p>
           <span className="text-xs">(Formerly DA-IICT)</span>
         </div>
         <div className="bg-white/10 text-white px-4 py-2 rounded-full flex items-center gap-2">
