@@ -45,16 +45,16 @@ export default function HeroSection() {
       </div>
 
       {/* Pre-Event Hackathon Announcement Button */}
-      {/* <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
+      <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
         <div className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition">
           <Link to="/hackathon" className="block text-black hover:underline">
             ⚡ Pre-Event Hackathon – Apply Now
           </Link>
-          <p className="text-xs font-normal mt-1">📅 5 - 7 January 2026</p>
+          <p className="text-xs font-normal mt-1 text-center">📅 9 - 11 January 2026</p>
         </div>
-      </div> */}
+      </div>
 
-      <div className="absolute top-4 right-4 md:right-10 z-20 text-right">
+      {/* <div className="absolute top-4 right-4 md:right-10 z-20 text-right">
         <div
           className="
       bg-gradient-to-r from-yellow-300 to-yellow-500 text-black 
@@ -70,7 +70,7 @@ export default function HeroSection() {
             (Stay tuned for dates; coming soon...)
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Tag */}
       <div className="relative z-10 text-sm bg-indigo-600 px-4 py-1 rounded-full font-semibold my-10 md:my-6 lg:my-4">
