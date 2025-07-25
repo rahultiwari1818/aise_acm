@@ -9,12 +9,16 @@ export default function TravelGrants() {
     >
       <SectionHeader title={"Travel Grants"} />
 
-      <p className="text-gray-700 mb-6  max-w-5xl mx-auto text-justify">
-        AISE 2026 aims to provide travel grants to student participants for
-        attending the school, subject to the availability of funds. Confirmation
-        of the travel grant availability will be provided at a later date.
-      </p>
+      <h2 className="text-xl font-semibold text-indigo-700 mb-2 text-center">
+        Call For Applications
+      </h2>
 
+      <p className="text-gray-700 mb-6  max-w-5xl mx-auto text-justify">
+        We are pleased to announce a travel grant for student participants to
+        attend the AISE 2026. ACM India is providing travel grant support. The
+        grant is meant to encourage outstation students studying in technical
+        institutions in India to attend the school. Each travel grant covers:
+      </p>
       {/* Form Button */}
       <div className="text-center my-6">
         {/* <a
@@ -29,8 +33,7 @@ export default function TravelGrants() {
 
       {/* Coverage */}
 
-
-      {/* <div className="mb-8">
+      <div className="mb-8">
         <h3 className="text-xl font-semibold text-indigo-700 mb-2">
           📋 Grant Coverage for Student Participants{" "}
         </h3>
@@ -39,16 +42,16 @@ export default function TravelGrants() {
             <li key={index}>{point}</li>
           ))}
         </ul>
-      </div> */}
+      </div>
 
       {/* Volunteering Note */}
       {/* <div className="bg-yellow-50 border border-yellow-200 text-yellow-900 p-4 rounded mb-8">
         Travel grant recipients may be asked to assist as volunteers. Tasks may include registration help,
         session support, etc., with less than 7 hours of commitment across the conference.
-      </div> */}
+      </div>  */}
 
       {/* Eligibility */}
-      {/* <div className="mb-8">
+      <div className="mb-8">
         <h3 className="text-xl font-semibold text-indigo-700 mb-2">
           ✅ Eligibility Criteria: for students
         </h3>
@@ -57,22 +60,34 @@ export default function TravelGrants() {
             <li key={index}>{point}</li>
           ))}
         </ul>
-      </div> */}
+      </div>
 
       {/* Registration Button */}
       <div className="text-center my-6">
-        {/* <a
+        <a
           href={travelGrants.registrationLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-600 hover:text-white transition"
         >
           Visit the Registration Page
-        </a> */}
+        </a>
+      </div>
+
+      {/* Travel Grant Reg Form */}
+      <div className="text-center my-6">
+        <a
+          href={travelGrants.registrationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-600 hover:text-white transition"
+        >
+          Grant Registration window will open soon.
+        </a>
       </div>
 
       {/* Note Section */}
-      {/* <div className="mb-8">
+      <div className="mb-8">
         <h3 className="text-xl font-semibold text-indigo-700 mb-2">
           📌 Note for School Participants
         </h3>
@@ -81,7 +96,7 @@ export default function TravelGrants() {
             <li key={index}>{note}</li>
           ))}
         </ul>
-      </div> */}
+      </div>
 
       {/* Contact */}
       <div className="bg-gray-50 border border-gray-200 p-4 rounded text-gray-700">

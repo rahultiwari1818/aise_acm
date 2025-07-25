@@ -10,9 +10,9 @@ const travelGrants = {
   ],
 
   eligibility: [
-    "Full-time students enrolled in Indian institutions.",
-    "College must be outside Gandhinagar/Ahmedabad (official address proof required).",
-    "Student must be registered for the school before applying for the travel grant."
+    "Full-time students enrolled in a College/Institute/University in India.",
+    "The college/institute/university must be outside Gandhinagar/Ahmedabad. The official address of the college/institute/university in its official letterhead/website should not mention the city as 'Gandhinagar' / 'Ahmedabad' .",
+    "Student applicant must be registered for the school before applying for the grant."
   ],
 
   notes: [

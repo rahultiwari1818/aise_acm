@@ -48,7 +48,7 @@ export default function HeroSection() {
       <div className="absolute top-4 right-4 md:right-10 z-20 text-right my-2">
         <div className="bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition">
           <Link to="/hackathon" className="block text-black hover:underline">
-            ⚡ Pre-Event Hackathon – Apply Now
+            ⚡3 Days Hackathon Event – Apply Now
           </Link>
           <p className="text-xs font-normal mt-1 text-center">📅 9 - 11 January 2026</p>
         </div>

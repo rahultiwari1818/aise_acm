@@ -9,10 +9,6 @@ import RegistrationForm from "../components/Registration";
 import TravelGrants from "../components/TravelGrants";
 import Sponsors from "../components/Sponsors";
 
-
-
-
-
 export default function Home() {
   return (
     <div>
@@ -57,11 +53,12 @@ export default function Home() {
           <VenueDates />
         </section>
         <section
-          id="Venue"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          id="Registration"
+          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
         >
-          <AboutCity />
+          <RegistrationForm />
         </section>
+
 
         {/* <section
           id="SocialEvents"
@@ -77,22 +74,20 @@ export default function Home() {
           <Accommodation />
         </section>
 
-        <section
-          id="Registration"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
-        >
-          <RegistrationForm />
-        </section>
 
         <section
           id="Grant"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
-            <TravelGrants/>
+          <TravelGrants />
         </section>
 
-
-
+        <section
+          id="Venue"
+          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+        >
+          <AboutCity />
+        </section>
         <section
           id="Sponsors"
           className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"

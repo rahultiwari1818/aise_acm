@@ -6,7 +6,7 @@ export default function RegistrationFeeAndNotes() {
     "The registration fee for all school participants will be reimbursed after attending the school, provided they attend all four days.",
     "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
     "A participation certificate will be awarded to individuals with full attendance across all four days.",
-    "You may also register for the pre-event hackathon on January 5 to 7, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
+    "You may also register for the  hackathon on January 9 to 11, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
     // "Accommodation will be provided in university campus hostels at no additional cost.",
     // "For more details, visit the Hackathon page.",
   ];
@@ -27,7 +27,7 @@ export default function RegistrationFeeAndNotes() {
               <th className="px-6 py-4 text-base border-r border-indigo-700">
                 ACM Member
               </th>
-              <th className="px-6 py-4 text-base">Non-ACM Member</th>
+              {/* <th className="px-6 py-4 text-base">Non-ACM Member</th> */}
             </tr>
           </thead>
           <tbody className="text-gray-800 text-sm">
@@ -35,30 +35,30 @@ export default function RegistrationFeeAndNotes() {
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Students
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹400 + GST</td>
-              <td className="px-6 py-4">₹500 + GST</td>
+              <td className="px-6 py-4 border-r border-gray-300">₹400 </td>
+              {/* <td className="px-6 py-4">₹500 </td> */}
             </tr>
             <tr className="bg-white">
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Faculty
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹800 + GST</td>
-              <td className="px-6 py-4">₹1000 + GST</td>
+              <td className="px-6 py-4 border-r border-gray-300">₹800 </td>
+              {/* <td className="px-6 py-4">₹1000 </td> */}
             </tr>
             <tr className="bg-gray-50">
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Industry Professionals
               </td>
               <td className="px-6 py-4 border-r border-gray-300">
-                ₹1500 + GST
+                ₹1500 
               </td>
-              <td className="px-6 py-4">₹2000 + GST</td>
+              {/* <td className="px-6 py-4">₹2000 </td> */}
             </tr>
           </tbody>
         </table>
-        <p className="text-right w-fit py-4 text-sm italic text-gray-700">
+        {/* <p className="text-right w-fit py-4 text-sm italic text-gray-700">
           * GST may be applicable on registration fees (to be confirmed later).
-        </p>
+        </p> */}
         {/* <p className="text-right w-fit  text-sm italic text-gray-700">
           * Registration fees is refundable to all school participants.
         </p> */}
