@@ -25,7 +25,7 @@ export default function RegistrationFeeAndNotes() {
                 Category
               </th>
               <th className="px-6 py-4 text-base border-r border-indigo-700">
-                ACM Member
+                Fees
               </th>
               {/* <th className="px-6 py-4 text-base">Non-ACM Member</th> */}
             </tr>

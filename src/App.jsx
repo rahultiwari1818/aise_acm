@@ -5,10 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import RouterApp from "./router/Router.jsx";
 import { useEffect, useState } from "react";
 import loaderIcon from "./assets/logo.png"; // <-- Replace with your actual icon path
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-
   const [loading, setLoading] = useState(true);
 
   const handleLoad = () => {
@@ -25,8 +25,6 @@ function App() {
     // return () => window.removeEventListener("load", handleLoad);/
   }, []);
 
-
-
   if (loading) {
     return (
       <div className="fixed h-screen w-screen inset-0 flex items-center justify-center bg-white z-50">
@@ -42,8 +40,9 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <RouterApp/>
+      <RouterApp />
       <Footer />
+      <ToastContainer />
     </BrowserRouter>
   );
 }

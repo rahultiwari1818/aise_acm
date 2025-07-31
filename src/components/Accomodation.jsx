@@ -1,5 +1,7 @@
+import { useCallback, useState } from "react";
 import data from "../data/accomodation.js";
 import SectionHeader from "./sub-components/SectionHeader.jsx";
+import HostelForm from "./HostelFormDialog.jsx";
 
 // export default function Accommodation() {
 //   return (
@@ -62,9 +64,22 @@ import SectionHeader from "./sub-components/SectionHeader.jsx";
 
 
 export default function Accommodation() {
+
+
   const acc = data.accommodation;
 
+  const [isOpenHostelFormDialog,setIsOpenHostelFormDialog] = useState(false);
+
+  const openHostelFormDialog = () =>{
+    setIsOpenHostelFormDialog(true);
+  }
+
+  const closeHostelFormDialog = useCallback(()=>{
+    setIsOpenHostelFormDialog(false);
+  },[]);
+
   return (
+    <>
     <section id="Accommodation" className="px-4 py-12 md:px-12 max-w-7xl mx-auto">
       <SectionHeader title={"Accommodation"} />
 
@@ -105,7 +120,7 @@ export default function Accommodation() {
         <p><strong>💰 Charges:</strong> {acc.female_faculty.charges}</p>
         <p><strong>📢 Notification:</strong> {acc.female_faculty.notification}</p>
         {/* <p><strong>✅ Action Required:</strong> {acc.female_faculty.action_required}</p> */}
-        <p>
+        {/* <p>
           <a
             href="#"
             target="_blank"
@@ -114,7 +129,7 @@ export default function Accommodation() {
           >
             Form will be available soon
           </a>
-        </p>
+        </p> */}
       </div>
 
       {/* Male  Info */}
@@ -124,7 +139,7 @@ export default function Accommodation() {
         <p><strong>💰 Charges:</strong> {acc.male_faculty.charges}</p>
         <p><strong>📢 Notification:</strong> {acc.male_faculty.notification}</p>
         {/* <p><strong>✅ Action Required:</strong> {acc.male_faculty.action_required}</p> */}
-        <p>
+        {/* <p>
           <a
             href="#"
             target="_blank"
@@ -133,8 +148,16 @@ export default function Accommodation() {
           >
             Form will be available soon
           </a>
-        </p>
+        </p> */}
       </div>
+</div>
+
+<div className=" flex justify-center items-center py-5">
+  <button className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
+  onClick={openHostelFormDialog}
+  >
+    Book Hostel
+  </button>
 </div>
 
       {/* Male Faculty / Industry */}
@@ -168,5 +191,7 @@ export default function Accommodation() {
         </ul>
       </div> */}
     </section>
+    <HostelForm isOpen={isOpenHostelFormDialog} onClose={closeHostelFormDialog}/>
+    </>
   );
 }

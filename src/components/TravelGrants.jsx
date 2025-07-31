@@ -17,7 +17,7 @@ export default function TravelGrants() {
         We are pleased to announce a travel grant for student participants to
         attend the AISE 2026. ACM India is providing travel grant support. The
         grant is meant to encourage outstation students studying in technical
-        institutions in India to attend the school. Each travel grant covers:
+        institutions in India to attend the school. Each travel grant covers:
       </p>
       {/* Form Button */}
       <div className="text-center my-6">

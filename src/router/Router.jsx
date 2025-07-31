@@ -4,16 +4,22 @@ import Hackathon from "../pages/Hackathon";
 import IndustryShowcase from "../pages/IndustryShowcase";
 import Mrt from "../pages/Mrt";
 import Speakers from "../pages/Speakers";
+import Login from "../pages/Login";
+import AdminDashboard from "../pages/AdminDashboard";
+import ProtectedRoute from "../components/sub-components/ProtectedRoute";
 
 export default function RouterApp() {
-
   return (
     <Routes>
-      <Route path="/"  element={<Home />}/>
-      <Route path="/hackathon" element={<Hackathon/>} />
-      <Route path="/industry-showcase" element={<IndustryShowcase/>} />
-      <Route path="/5mrt" element={<Mrt/>} />
-      <Route path="/speakers" element={<Speakers/>} />
+      <Route path="/" element={<Home />} />
+      <Route path="/hackathon" element={<Hackathon />} />
+      <Route path="/industry-showcase" element={<IndustryShowcase />} />
+      <Route path="/5mrt" element={<Mrt />} />
+      <Route path="/speakers" element={<Speakers />} />
+      <Route path="/login" element={<Login />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/adminDashboard" element={<AdminDashboard />} />
+      </Route>
     </Routes>
-  )
+  );
 }

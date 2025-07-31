@@ -3,36 +3,10 @@ import ChairCard from "./sub-components/Chair";
 import saurabh_sir from "../assets/chairs/saurabh_tiwari.jpg";
 import yash_sir from "../assets/chairs/yash_agarwal.jpg";
 import RegistrationFeeAndNotes from "./sub-components/RegistrationFeeAndNotes";
+import RegistrationForm from "./sub-components/RegistrationForm";
 
-const RegistrationForm = () => {
-  // const [formData, setFormData] = useState({
-  //   fullName: "",
-  //   email: "",
-  //   institution: "",
-  //   country: "",
-  //   position: "",
-  //   education: "",
-  //   motivation: "",
-  //   scholarship: "",
-  // });
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = () => {
-//     const mailto = `mailto:chemacm@unex.es?subject=Registration&body=${encodeURIComponent(
-//       `Full Name: ${formData.fullName}
-// Email: ${formData.email}
-// Institution: ${formData.institution}
-// Country: ${formData.country}
-// Position: ${formData.position}
-// Highest Level of Education: ${formData.education}
-// Motivation: ${formData.motivation}
-// Accommodation Scholarship: ${formData.scholarship}`
-//     )}`;
-//     window.location.href = mailto;
-//   };
+const Registration = () => {
+  
 
   return (
     <div className="min-h-screen px-4 py-8  text-black">
@@ -71,91 +45,8 @@ const RegistrationForm = () => {
         </div> */}
 
         <RegistrationFeeAndNotes/>
-
-        {/* <form className="grid grid-cols-1 gap-4">
-          <input
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
-            placeholder="Enter your full name"
-            className="input"
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="your.email@example.com"
-            className="input"
-            required
-          />
-          <input
-            name="institution"
-            value={formData.institution}
-            onChange={handleChange}
-            placeholder="University, Company, Organization..."
-            className="input"
-            required
-          />
-          <input
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            placeholder="Your country"
-            className="input"
-            required
-          />
-          <input
-            name="position"
-            value={formData.position}
-            onChange={handleChange}
-            placeholder="e.g., Software Engineer, Chemistry..."
-            className="input"
-            required
-          />
-          <select
-            name="education"
-            value={formData.education}
-            onChange={handleChange}
-            className="input"
-            required
-          >
-            <option value="">Select your education level...</option>
-            <option value="Undergraduate">Undergraduate</option>
-            <option value="Postgraduate">Postgraduate</option>
-            <option value="PhD">PhD</option>
-            <option value="Other">Other</option>
-          </select>
-          <textarea
-            name="motivation"
-            value={formData.motivation}
-            onChange={handleChange}
-            placeholder="Tell us about your motivation for attending and what you expect to learn..."
-            rows={4}
-            className="input"
-          />
-          <select
-            name="scholarship"
-            value={formData.scholarship}
-            onChange={handleChange}
-            className="input"
-            required
-          >
-            <option value="">Select an option</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-
-          
-        </form> */}
-
-        {/* <button
-          onClick={handleSubmit}
-          className="w-full mt-6 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
-        >
-          🚀 Submit Registration
-        </button> */}
+        
+        <RegistrationForm/>
 
         <div className="mt-10 text-center">
           <h2 className="text-xl font-semibold mb-2">
@@ -196,4 +87,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;
+export default Registration;
