@@ -15,23 +15,27 @@ const AllocateRoomDialog = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Reset state on dialog open
     if (isOpen) {
       setRoomNumber(currentRoom);
       setStatus(currentStatus);
+      console.log(currentRoom,currentStatus)
     }
   }, [isOpen, currentRoom, currentStatus]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (status === "allocated" && !roomNumber.trim()) {
-      toast.error("Room number is required when allocating.");
+    if (!status) {
+      toast.error("Please select a status.");
       return;
     }
 
-    const finalRoomNumber =
-      status === "pending" || status === "rejected" ? null : roomNumber;
+    if (status === "approved" && !roomNumber.trim()) {
+      toast.error("Room number is required when status is approved.");
+      return;
+    }
+
+    const finalRoomNumber = status === "approved" ? roomNumber : null;
 
     setLoading(true);
     try {
@@ -44,7 +48,7 @@ const AllocateRoomDialog = ({
       );
 
       toast.success(res.data.message);
-      onClose(); // Close dialog after success
+      onClose();
     } catch (err) {
       console.error(err);
       toast.error(err.response?.data?.error || "Failed to update room status.");
@@ -55,9 +59,8 @@ const AllocateRoomDialog = ({
 
   const handleStatusChange = (value) => {
     setStatus(value);
-
-    if (value === "Pending" || value === "Rejected") {
-      setRoomNumber(""); // Clear room number
+    if (value !== "approved") {
+      setRoomNumber("");
     }
   };
 
@@ -71,23 +74,9 @@ const AllocateRoomDialog = ({
       onConfirm={handleSubmit}
     >
       <form onSubmit={handleSubmit} className="grid gap-4 text-sm">
+        {/* Step 1: Status Selection */}
         <div>
-          <label className="block font-semibold mb-1">Room Number</label>
-          <input
-            type="text"
-            className="border p-2 rounded w-full"
-            placeholder="e.g., A-102"
-            value={roomNumber}
-            onChange={(e) => setRoomNumber(e.target.value)}
-            disabled={status !== "allocated"}
-            required={status === "allocated"}
-          />
-        </div>
-
-        <div>
-          <label className="block font-semibold mb-1">
-            Room Allocation Status
-          </label>
+          <label className="block font-semibold mb-1">Room Allocation Status</label>
           <select
             className="border p-2 rounded w-full"
             value={status}
@@ -95,11 +84,26 @@ const AllocateRoomDialog = ({
             required
           >
             <option value="">Select status</option>
-            <option value="allocated">Allocated</option>
+            <option value="approved">Allocated</option>
             <option value="pending">Pending</option>
             <option value="rejected">Rejected</option>
           </select>
         </div>
+
+        {/* Step 2: Only show room number if status is approved */}
+        {status === "approved" && (
+          <div>
+            <label className="block font-semibold mb-1">Room Number</label>
+            <input
+              type="text"
+              className="border p-2 rounded w-full"
+              placeholder="e.g., A-102"
+              value={roomNumber}
+              onChange={(e) => setRoomNumber(e.target.value)}
+              required
+            />
+          </div>
+        )}
 
         <button
           type="submit"

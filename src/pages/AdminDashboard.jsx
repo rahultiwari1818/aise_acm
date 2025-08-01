@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { formatDateToDDMMYYYY } from "../utils/dateUtils";
 import AllocateRoomDialog from "../components/AllocateRoomDialog";
+import exportToExcel from "../utils/exportToExcel";
 
 export default function AdminDashboard() {
   const [users, setUsers] = useState([]);
@@ -10,19 +11,32 @@ export default function AdminDashboard() {
   const [view, setView] = useState("users");
   const [loading, setLoading] = useState(true);
 
-  const [isOpenAllocateRoomDialog, setIsOpenAllocateRoomDialog] = useState(false);
-  const [selectedRegistrationId, setSelectedRegistrationId] = useState(null);
+  const [isOpenAllocateRoomDialog, setIsOpenAllocateRoomDialog] =
+    useState(false);
+  const [selectedRegistrationData, setSelectedRegistrationData] = useState({
+    id: "",
+    allocatedRoom: "",
+    status: "",
+  });
 
   const URL = import.meta.env.VITE_API_URL;
 
   const closeAllocateRoomDialog = useCallback(() => {
     setIsOpenAllocateRoomDialog(false);
-    setSelectedRegistrationId(null);
+    setSelectedRegistrationData({
+      id: "",
+      allocatedRoom: "",
+      status: "",
+    });
     fetchHostelRegistrations(); // Refresh data on close
   }, []);
 
-  const openAllocateRoomDialog = (id) => {
-    setSelectedRegistrationId(id);
+  const openAllocateRoomDialog = (id, roomNo, status) => {
+    setSelectedRegistrationData({
+      id: id,
+      allocatedRoom: roomNo,
+      status: status,
+    });
     setIsOpenAllocateRoomDialog(true);
   };
 
@@ -38,7 +52,7 @@ export default function AdminDashboard() {
       });
       setUsers(res.data.data);
     } catch (err) {
-        console.log(err);
+      console.log(err);
       toast.error("Failed to load users");
     } finally {
       setLoading(false);
@@ -53,7 +67,7 @@ export default function AdminDashboard() {
       });
       setHostels(res.data.data);
     } catch (err) {
-        console.log(err);
+      console.log(err);
       toast.error("Failed to load hostel data");
     } finally {
       setLoading(false);
@@ -70,7 +84,9 @@ export default function AdminDashboard() {
   return (
     <>
       <div className="p-6 bg-gray-100 mt-16 md:mt-5 min-h-screen">
-        <h1 className="text-3xl font-bold mb-6 text-blue-700">Admin Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-6 text-blue-700">
+          Admin Dashboard
+        </h1>
 
         <div className="mb-4 md:flex gap-4">
           <button
@@ -83,6 +99,7 @@ export default function AdminDashboard() {
           >
             Registered Users
           </button>
+
           <button
             onClick={() => handleViewChange("hostels")}
             className={`px-4 py-2 rounded my-2 cursor-pointer ${
@@ -93,6 +110,26 @@ export default function AdminDashboard() {
           >
             Hostel Registrations
           </button>
+
+          {
+            view === "hostels"
+            ?
+          <button
+            onClick={() => exportToExcel(hostels)}
+            className={`px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border`}
+          >
+            Export Hostel Data
+          </button>
+            :
+          <button
+            onClick={() => exportToExcel(users)}
+            
+            className={`px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border`}
+          >
+            Export User Data
+          </button>
+          }
+
         </div>
 
         {loading ? (
@@ -172,14 +209,18 @@ export default function AdminDashboard() {
                     </td>
                     <td className="p-3">
                       <button
-                        onClick={() => openAllocateRoomDialog(h.id)}
+                        onClick={() =>
+                          openAllocateRoomDialog(h.id, h.room_number, h.status)
+                        }
                         className={`px-3 py-2 text-sm rounded ${
                           h.status === "pending"
                             ? "bg-green-600 hover:bg-green-700"
                             : "bg-orange-500 hover:bg-orange-600"
                         } text-white`}
                       >
-                        {h.status === "pending" ? "Allocate Room" : "Change Status"}
+                        {h.status === "pending"
+                          ? "Allocate Room"
+                          : "Change Status"}
                       </button>
                     </td>
                   </tr>
@@ -193,7 +234,9 @@ export default function AdminDashboard() {
       <AllocateRoomDialog
         isOpen={isOpenAllocateRoomDialog}
         onClose={closeAllocateRoomDialog}
-        registrationId={selectedRegistrationId}
+        registrationId={selectedRegistrationData.id}
+        currentRoom={selectedRegistrationData.allocatedRoom}
+        currentStatus={selectedRegistrationData.status}
       />
     </>
   );

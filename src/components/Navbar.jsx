@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import Cookies from "js-cookie";
+import axios from "axios";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const token = Cookies.get("adminToken");
+  
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -34,9 +38,26 @@ export default function Navbar() {
     }, 100); // slight delay to ensure content is mounted
   };
 
+const logoutHandler = async () => {
+  try {
+    const URL = import.meta.env.VITE_API_URL;
+     await axios.post(
+      `${URL}/api/v1/admin/logout`,
+      {},
+      { withCredentials: true }
+    );
+
+    navigate("/login");
+      // Optionally redirect or clear local state
+  } catch (error) {
+    console.log("Error While Logging Out!", error);
+  }
+};
+
+
   return (
     <nav className="bg-white shadow-md fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className={` ${token  ? "max-w-8xl" :"max-w-7xl"} mx-auto px-4 py-3 flex justify-between items-center`}>
         <div className="text-2xl font-bold text-blue-600">
           <a href="/">
             <img src={logo} alt="logo" className="h-16 w-32" />
@@ -60,7 +81,12 @@ export default function Navbar() {
                   {link.label}
                 </button>
               );
-            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase"|| link.href === "/speakers") {
+            } else if (
+              link.href === "/hackathon" ||
+              link.href === "/5mrt" ||
+              link.href === "/industry-showcase" ||
+              link.href === "/speakers"
+            ) {
               return (
                 <Link
                   key={link.href}
@@ -86,6 +112,13 @@ export default function Navbar() {
               );
             }
           })}
+          {token && (
+            <button className="text-white bg-red-500 rounded-2xl px-4 py-1 hover:text-red-500 hover:bg-white border hover:border-red-500"
+            onClick={logoutHandler}
+            >
+              Logout
+            </button>
+          )}
         </div>
 
         {/* Mobile Toggle */}
@@ -135,7 +168,12 @@ export default function Navbar() {
                   {link.label}
                 </button>
               );
-            } else if (link.href === "/hackathon" || link.href === "/5mrt" || link.href === "/industry-showcase" || link.href === "/speakers") {
+            } else if (
+              link.href === "/hackathon" ||
+              link.href === "/5mrt" ||
+              link.href === "/industry-showcase" ||
+              link.href === "/speakers"
+            ) {
               return (
                 <Link
                   key={link.href}
@@ -159,6 +197,14 @@ export default function Navbar() {
               );
             }
           })}
+
+          {token && (
+            <button className="text-white bg-red-500 rounded-2xl px-4 py-1 hover:text-red-500 hover:bg-white border hover:border-red-500" 
+            onClick={logoutHandler}
+            >
+              Logout
+            </button>
+          )}
         </div>
       )}
     </nav>
