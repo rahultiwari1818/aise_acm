@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { formatDateToDDMMYYYY } from "../utils/dateUtils";
 import AllocateRoomDialog from "../components/AllocateRoomDialog";
 import exportToExcel from "../utils/exportToExcel";
+import SearchBar from "../components/sub-components/SearchBar";
+import debounce from "../utils/otherUtils.js";
 
 export default function AdminDashboard() {
   const [users, setUsers] = useState([]);
@@ -40,31 +42,13 @@ export default function AdminDashboard() {
     setIsOpenAllocateRoomDialog(true);
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  const fetchUsers = async () => {
+  const fetchHostelRegistrations = async (search = "") => {
     setLoading(true);
     try {
-      const res = await axios.get(`${URL}/api/v1/admin/getAllUsers`, {
-        withCredentials: true,
-      });
-      setUsers(res.data.data);
-    } catch (err) {
-      console.log(err);
-      toast.error("Failed to load users");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const fetchHostelRegistrations = async () => {
-    setLoading(true);
-    try {
-      const res = await axios.get(`${URL}/api/v1/admin/getAllHostelBookings`, {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        `${URL}/api/v1/admin/getAllHostelBookings?search=${search}`,
+        { withCredentials: true }
+      );
       setHostels(res.data.data);
     } catch (err) {
       console.log(err);
@@ -74,19 +58,46 @@ export default function AdminDashboard() {
     }
   };
 
+  const fetchUsers = async (search = "") => {
+    setLoading(true);
+    try {
+      const res = await axios.get(
+        `${URL}/api/v1/admin/getAllUsers?search=${search}`,
+        { withCredentials: true }
+      );
+      setUsers(res.data.data);
+    } catch (err) {
+      console.log(err);
+      toast.error("Failed to load users");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleViewChange = (v) => {
     setView(v);
-    if (v === "hostels" && hostels.length === 0) {
+    if (v === "users" && users.length === 0) {
+      fetchUsers();
+    } else if (v === "hostels" && hostels.length === 0) {
       fetchHostelRegistrations();
     }
   };
 
+  const searchHandler = useCallback(
+    debounce(async (searchTerm) => {
+      if (view === "users") {
+        await fetchUsers(searchTerm);
+      } else if (view === "hostels") {
+        await fetchHostelRegistrations(searchTerm);
+      }
+    }, 300),
+    [view]
+  );
+
   return (
     <>
       <div className="p-6 bg-gray-100 mt-16 md:mt-5 min-h-screen">
-        <h1 className="text-3xl font-bold mb-6 text-blue-700">
-          Admin Dashboard
-        </h1>
+        <h1 className="text-3xl font-bold mb-6 text-blue-700">Admin Dashboard</h1>
 
         <div className="mb-4 md:flex gap-4">
           <button
@@ -111,25 +122,27 @@ export default function AdminDashboard() {
             Hostel Registrations
           </button>
 
-          {
-            view === "hostels"
-            ?
           <button
-            onClick={() => exportToExcel(hostels)}
-            className={`px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border`}
+            onClick={() =>
+              view === "hostels"
+                ? exportToExcel(hostels)
+                : exportToExcel(users)
+            }
+            className="px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border"
           >
-            Export Hostel Data
+            Export {view === "hostels" ? "Hostel" : "User"} Data
           </button>
-            :
-          <button
-            onClick={() => exportToExcel(users)}
-            
-            className={`px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border`}
-          >
-            Export User Data
-          </button>
-          }
+        </div>
 
+        <div className="my-4">
+          <SearchBar
+            onSearch={searchHandler}
+            placeholder={
+              view === "hostels"
+                ? "Search by name, email, phone, status, room no, dates..."
+                : "Search users..."
+            }
+          />
         </div>
 
         {loading ? (
@@ -139,7 +152,7 @@ export default function AdminDashboard() {
             <table className="min-w-full bg-white border rounded shadow-sm">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="p-3 text-left">#</th>
+                  <th className="p-3 text-left">Sr.No</th>
                   <th className="p-3 text-left">Name</th>
                   <th className="p-3 text-left">Email</th>
                   <th className="p-3 text-left">Phone</th>
@@ -148,16 +161,24 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {users.map((u, i) => (
-                  <tr key={u.id} className="border-t hover:bg-gray-50">
-                    <td className="p-3">{i + 1}</td>
-                    <td className="p-3">{u.name}</td>
-                    <td className="p-3">{u.email}</td>
-                    <td className="p-3">{u.phone_number}</td>
-                    <td className="p-3 capitalize">{u.category}</td>
-                    <td className="p-3">{u.gender}</td>
+                {users.length === 0 ? (
+                  <tr className="border-t hover:bg-gray-50">
+                    <td className="p-3 text-center" colSpan={6}>
+                      No Users Found
+                    </td>
                   </tr>
-                ))}
+                ) : (
+                  users.map((u, i) => (
+                    <tr key={u.id} className="border-t hover:bg-gray-50">
+                      <td className="p-3">{i + 1}</td>
+                      <td className="p-3">{u.name}</td>
+                      <td className="p-3">{u.email}</td>
+                      <td className="p-3">{u.phone_number}</td>
+                      <td className="p-3 capitalize">{u.category}</td>
+                      <td className="p-3">{u.gender}</td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
@@ -166,8 +187,10 @@ export default function AdminDashboard() {
             <table className="min-w-full bg-white border rounded shadow-sm">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="p-3 text-left">#</th>
-                  <th className="p-3 text-left">Email/Phone</th>
+                  <th className="p-3 text-left">Sr.No</th>
+                  <th className="p-3 text-left">Name</th>
+                  <th className="p-3 text-left">Email</th>
+                  <th className="p-3 text-left">Phone</th>
                   <th className="p-3 text-left">From</th>
                   <th className="p-3 text-left">To</th>
                   <th className="p-3 text-left">Days</th>
@@ -178,53 +201,73 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {hostels.map((h, i) => (
-                  <tr key={h.id} className="border-t hover:bg-gray-50">
-                    <td className="p-3">{i + 1}</td>
-                    <td className="p-3">{h.name}</td>
-                    <td className="p-3">{formatDateToDDMMYYYY(h.from_date)}</td>
-                    <td className="p-3">{formatDateToDDMMYYYY(h.to_date)}</td>
-                    <td className="p-3">{h.days}</td>
-                    <td className="p-3">
-                      <a
-                        href={`${URL}/${h.id_proof}`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-blue-600 hover:underline"
-                      >
-                        View Proof
-                      </a>
-                    </td>
-                    <td className="p-3">{h.room_number || "Not Allocated"}</td>
-                    <td
-                      className={`p-3 capitalize font-medium ${
-                        h.status === "approved"
-                          ? "text-green-600"
-                          : h.status === "rejected"
-                          ? "text-red-600"
-                          : "text-yellow-600"
-                      }`}
-                    >
-                      {h.status}
-                    </td>
-                    <td className="p-3">
-                      <button
-                        onClick={() =>
-                          openAllocateRoomDialog(h.id, h.room_number, h.status)
-                        }
-                        className={`px-3 py-2 text-sm rounded ${
-                          h.status === "pending"
-                            ? "bg-green-600 hover:bg-green-700"
-                            : "bg-orange-500 hover:bg-orange-600"
-                        } text-white`}
-                      >
-                        {h.status === "pending"
-                          ? "Allocate Room"
-                          : "Change Status"}
-                      </button>
+                {hostels.length === 0 ? (
+                  <tr className="border-t hover:bg-gray-50">
+                    <td className="p-3 text-center" colSpan={11}>
+                      No Hostel Registrations Found
                     </td>
                   </tr>
-                ))}
+                ) : (
+                  hostels.map((h, i) => (
+                    <tr key={h.id} className="border-t hover:bg-gray-50">
+                      <td className="p-3">{i + 1}</td>
+                      <td className="p-3">{h.name}</td>
+                      <td className="p-3">{h.email}</td>
+                      <td className="p-3">{h.phone_number}</td>
+                      <td className="p-3">
+                        {formatDateToDDMMYYYY(h.from_date)}
+                      </td>
+                      <td className="p-3">
+                        {formatDateToDDMMYYYY(h.to_date)}
+                      </td>
+                      <td className="p-3">{h.days}</td>
+                      <td className="p-3">
+                        <a
+                          href={`${URL}/${h.id_proof}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                      <td className="p-3">
+                        {h.room_number || "Not Allocated"}
+                      </td>
+                      <td
+                        className={`p-3 capitalize font-medium ${
+                          h.status === "approved"
+                            ? "text-green-600"
+                            : h.status === "rejected"
+                            ? "text-red-600"
+                            : "text-yellow-600"
+                        }`}
+                      >
+                        {h.status}
+                      </td>
+                      <td className="p-3">
+                        <button
+                          onClick={() =>
+                            openAllocateRoomDialog(
+                              h.id,
+                              h.room_number,
+                              h.status
+                            )
+                          }
+                          className={`px-3 py-2 text-sm rounded ${
+                            h.status === "pending"
+                              ? "bg-green-600 hover:bg-green-700"
+                              : "bg-orange-500 hover:bg-orange-600"
+                          } text-white`}
+                        >
+                          {h.status === "pending"
+                            ? "Allocate Room"
+                            : "Change Status"}
+                        </button>
+                      </td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
