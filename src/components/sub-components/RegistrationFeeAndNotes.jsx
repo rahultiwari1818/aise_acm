@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function RegistrationFeeAndNotes() {
   const notes = [
-    "The registration fee for all school participants will be reimbursed after attending the school, provided they attend all four days.",
-    "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
+    "The registration fee for first 40 school participants will be reimbursed after attending the school, provided they attend all four days. Rest of the partcipant's registration fees will not be reimbursed.",
+    "Please apply for the school at the earliest by paying the registration fees.",
+    "Registration Fees also includes 18% GST.",
+    // "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
     "A participation certificate will be awarded to individuals with full attendance across all four days.",
-    "You may also register for the  hackathon on January 9 to 11, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
+    "You may also register for the  hackathon seperately on January 9 to 11, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
     // "Accommodation will be provided in university campus hostels at no additional cost.",
     // "For more details, visit the Hackathon page.",
   ];
@@ -35,14 +37,14 @@ export default function RegistrationFeeAndNotes() {
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Students
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹400 </td>
+              <td className="px-6 py-4 border-r border-gray-300">₹400 + 18% GST</td>
               {/* <td className="px-6 py-4">₹500 </td> */}
             </tr>
             <tr className="bg-white">
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Faculty
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹800 </td>
+              <td className="px-6 py-4 border-r border-gray-300">₹800 + 18% GST</td>
               {/* <td className="px-6 py-4">₹1000 </td> */}
             </tr>
             <tr className="bg-gray-50">
@@ -50,7 +52,7 @@ export default function RegistrationFeeAndNotes() {
                 Industry Professionals
               </td>
               <td className="px-6 py-4 border-r border-gray-300">
-                ₹1500 
+                ₹1500 + 18% GST
               </td>
               {/* <td className="px-6 py-4">₹2000 </td> */}
             </tr>
@@ -62,7 +64,7 @@ export default function RegistrationFeeAndNotes() {
         {/* <p className="text-right w-fit  text-sm italic text-gray-700">
           * Registration fees is refundable to all school participants.
         </p> */}
-        <p>
+        {/* <p>
           <a
             href="#"
             target="_blank"
@@ -71,7 +73,7 @@ export default function RegistrationFeeAndNotes() {
           >
             Registration window will open soon.
           </a>
-        </p>
+        </p> */}
       </div>
 
       {/* Notes Section */}

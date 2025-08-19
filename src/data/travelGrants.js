@@ -18,7 +18,8 @@ const travelGrants = {
   notes: [
     "Submit hard-copy forms at the registration desk during the school.",
     "Required: Travel ticket copies, college ID, and permission letter on letterhead (for student participants only).",
-    "Participants must attend all four days of the school mark attendance to avail the travel and registration grant, and also getting the participation certificate."
+    "Participants must attend all four days of the school mark attendance to avail the travel and registration grant, and also getting the participation certificate.",
+    "You will be notified by the organizers for the approval of the travel grant."
   ]
 };
 

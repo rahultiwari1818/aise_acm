@@ -1,8 +1,8 @@
 const data = {
     
-        "student" : 400,
-        "academician" : 800,
-        "industry professional" : 1500
+        "student" : 472,
+        "academician" : 944,
+        "industry professional" : 1770
     
 };
 

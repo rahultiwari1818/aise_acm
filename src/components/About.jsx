@@ -28,7 +28,7 @@ export default function About() {
             📍 Dhirubhai Ambani University, Gandhinagar
           </h3>
           <h6 className="">(Formely DA-IICT)</h6>
-          <h6 className="">January 7  10,   2026</h6>
+          <h6 className="">January 7-10,   2026</h6>
         </div>
       </div>
 

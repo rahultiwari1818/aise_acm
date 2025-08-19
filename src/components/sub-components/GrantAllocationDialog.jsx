@@ -1,26 +1,23 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import DialogBox from "./sub-components/Dialog";
+import DialogBox from "./Dialog";
 
-const AllocateRoomDialog = ({
+const GrantAllocationDialog = ({
   isOpen,
   onClose,
-  registrationId,
-  currentRoom = "",
-  currentStatus = "",
+  id,
+  currentStatus
 }) => {
-  const [roomNumber, setRoomNumber] = useState(currentRoom);
   const [status, setStatus] = useState(currentStatus);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
-      setRoomNumber(currentRoom);
       setStatus(currentStatus);
       // console.log(currentRoom,currentStatus,registrationId)
     }
-  }, [isOpen, currentRoom, currentStatus]);
+  }, [isOpen, currentStatus]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,20 +27,15 @@ const AllocateRoomDialog = ({
       return;
     }
 
-    if (status === "approved" && !roomNumber.trim()) {
-      toast.error("Room number is required when status is approved.");
-      return;
-    }
 
-    const finalRoomNumber = status === "approved" ? roomNumber : null;
 
     setLoading(true);
     try {
       const URL = import.meta.env.VITE_API_URL;
 
       const res = await axios.put(
-        `${URL}/api/v1/admin/changeBookingStatus/${registrationId}`,
-        { roomNumber: finalRoomNumber, status },
+        `${URL}/api/v1/admin/changeGrantStatus`,
+        { grantId:id,status },
         { withCredentials: true }
       );
 
@@ -59,16 +51,14 @@ const AllocateRoomDialog = ({
 
   const handleStatusChange = (value) => {
     setStatus(value);
-    if (value !== "approved") {
-      setRoomNumber("");
-    }
+    
   };
 
   return (
     <DialogBox
       isOpen={isOpen}
       onClose={onClose}
-      title="Allocate Room / Change Status"
+      title="Change Grant Status"
       confirmText="Save"
       cancelText="Cancel"
       onConfirm={handleSubmit}
@@ -76,7 +66,7 @@ const AllocateRoomDialog = ({
       <form onSubmit={handleSubmit} className="grid gap-4 text-sm">
         {/* Step 1: Status Selection */}
         <div>
-          <label className="block font-semibold mb-1">Room Allocation Status</label>
+          <label className="block font-semibold mb-1">Grant Status</label>
           <select
             className="border p-2 rounded w-full"
             value={status}
@@ -91,19 +81,7 @@ const AllocateRoomDialog = ({
         </div>
 
         {/* Step 2: Only show room number if status is approved */}
-        {status === "approved" && (
-          <div>
-            <label className="block font-semibold mb-1">Room Number</label>
-            <input
-              type="text"
-              className="border p-2 rounded w-full"
-              placeholder="e.g., A-102"
-              value={roomNumber}
-              onChange={(e) => setRoomNumber(e.target.value)}
-              required
-            />
-          </div>
-        )}
+        
 
         <button
           type="submit"
@@ -117,4 +95,4 @@ const AllocateRoomDialog = ({
   );
 };
 
-export default AllocateRoomDialog;
+export default GrantAllocationDialog;

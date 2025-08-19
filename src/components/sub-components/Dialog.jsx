@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 
 const DialogBox = ({
@@ -12,8 +11,8 @@ const DialogBox = ({
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white rounded-lg shadow-lg max-w-md w-full mx-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 scroll-auto min-h-screen min-w-screen">
+      <div className="bg-white rounded-lg shadow-lg max-w-[700px] w-full mx-4 h-max-[80vh] ">
         {/* Header */}
         <div className="border-b px-6 py-4 flex justify-between items-center">
           <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
@@ -26,7 +25,7 @@ const DialogBox = ({
         </div>
 
         {/* Body */}
-        <div className="p-6">{children}</div>
+        <div className="p-6 max-h-[78vh]">{children}</div>
 
         {/* Footer */}
         {showFooter && (

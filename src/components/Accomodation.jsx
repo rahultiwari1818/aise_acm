@@ -84,7 +84,7 @@ export default function Accommodation() {
       <SectionHeader title={"Accommodation"} />
 
       <p className="text-center text-gray-600 max-w-4xl mx-auto mb-6">
-        The hostel accommodation is availiable for participants on sharing basis in boys and girls hostels within DAU campus.
+        The hostel accommodation is availiable for 40  participants on sharing basis in boys and girls hostels within DAU campus.
       </p>
 
       {/* Main Info */}
@@ -172,7 +172,7 @@ export default function Accommodation() {
             className="text-yellow-800 underline"
           >
 
-            Details will be available soon.
+            Check Hotels.
           </a>
         </p>
       </div>

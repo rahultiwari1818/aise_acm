@@ -71,7 +71,7 @@ const data = {
     
     "male_faculty_and_industrial_persons": {
       "recommendation": "In case, you want to stay in hotel. Please check the list of the suggested nearby hotels.",
-      "hotel_list_link": "#"
+      "hotel_list_link": "https://drive.google.com/file/d/1AbafxB-wvHWfVz0tNlPHbfE2m07-D456/view?usp=sharing"
     },
     "other_options": {
       "INFLIBNET": {

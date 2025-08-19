@@ -1,6 +1,7 @@
 import dau from "../assets/sponsors/dau.png";
 import sigsoft from "../assets/sponsors/sigsoft.png";
 import acm from "../assets/sponsors/acm_logo.png";
+import monash from "../assets/sponsors/monash_black_logo.png";
 
 
 const data = {
@@ -22,7 +23,15 @@ const data = {
       image: acm,
       alt: "ACM Logo",
       link: "https://india.acm.org/",
-    }
+    },
+    
+    {
+      name: "Monash",
+      image: monash,
+      alt: "Monash Uni. Logo",
+      link: "https://www.monash.edu/",
+    },
+    
   ],
 };
 export default data;
