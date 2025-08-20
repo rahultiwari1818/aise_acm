@@ -9,7 +9,8 @@ export default function SpeakerCard({
   institution,
   abstract,
   topic,
-  link
+  link,
+  showMore
 }) {
   const [isOpenUserDetailsDialog, setIsOpenUserDetailsDialog] = useState(false);
 
@@ -22,7 +23,7 @@ export default function SpeakerCard({
       <div
         className="relative bg-white border border-gray-200 rounded-xl shadow-md 
                  hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 
-                 overflow-hidden p-6 animate-fadeIn hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-8 "
+                 overflow-hidden p-6 animate-fadeIn hover:border hover:border-b-2 hover:border-blue-500 hover:border-t-8 cursor-pointer"
         onClick={()=>{
           window.location.href=link
         }}
@@ -38,13 +39,17 @@ export default function SpeakerCard({
             <p className="text-sm text-indigo-600">{institution}</p>
           </div>
           {/* <p className="text-sm text-gray-600">{bio}</p> */}
+          {
+            showMore
+            &&
           <button
-          className="bg-blue-600 text-white px-4 py-2 rounded-2xl hover:border hover:border-blue-600 hover:bg-white hover:text-blue-600"
+          className="bg-blue-600 text-white px-4 py-2 rounded-2xl hover:border hover:border-blue-600 hover:bg-white hover:text-blue-600 cursor-pointer"
           onClick={(e)=>{
             e.stopPropagation();
             setIsOpenUserDetailsDialog(true)}}>
             More Details
           </button>
+          }
         </div>
 
         {/* Glow effect */}
