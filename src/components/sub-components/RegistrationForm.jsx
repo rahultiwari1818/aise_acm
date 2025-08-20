@@ -113,13 +113,15 @@ const MultiStepRegistrationForm = () => {
           paymentReceipt: null,
         });
         setStep(1);
-      } else {
+      }
+      
+      else {
         toast.error("❌ Unexpected response. Please try again.");
       }
+      
     } catch (error) {
-      if (error.response && error.response.data && error.response.data.errors) {
-        const errorMsgs = Object.values(error.response.data.errors).join(", ");
-        toast.error(`❗ ${errorMsgs}`);
+      if (error.response && error.response.data && error.response.data.error) {
+        toast.error(`❗ ${error.response.data.error}`);
       } else {
         toast.error("🚨 Server error. Please try again later.");
       }

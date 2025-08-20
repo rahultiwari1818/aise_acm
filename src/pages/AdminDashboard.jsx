@@ -46,6 +46,7 @@ export default function AdminDashboard() {
         id:"",status:""
       }
     })
+    fetchGrantRegistrations();
   },[]);
 
   const closeUserDetailsDialog = useCallback(()=>{

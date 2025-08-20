@@ -8,7 +8,7 @@ export default function SpeakerSection() {
         <SectionHeader title={"School Organizers"}/>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {speakerData?.["speakers"]?.map((speaker, index) => (
-          <SpeakerCard key={index} {...speaker} />
+          <SpeakerCard key={index} {...speaker} showMore={false}/>
         ))}
       </div>
     </section>
