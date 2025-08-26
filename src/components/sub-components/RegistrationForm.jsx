@@ -212,7 +212,7 @@ const MultiStepRegistrationForm = () => {
                 className="input w-full border p-2 rounded"
               >
                 <option value="">Select degree...</option>
-                <option value="Bachelors">Bachelors</option>
+                {/* <option value="Bachelors">Bachelors</option> */}
                 <option value="Masters">Masters</option>
                 <option value="PhD">PhD</option>
               </select>

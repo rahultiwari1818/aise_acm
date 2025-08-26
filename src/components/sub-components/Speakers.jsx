@@ -10,7 +10,9 @@ export default function SpeakerCard({
   abstract,
   topic,
   link,
-  showMore
+  showMore,
+  abstracts1,
+  topic1
 }) {
   const [isOpenUserDetailsDialog, setIsOpenUserDetailsDialog] = useState(false);
 
@@ -62,6 +64,8 @@ export default function SpeakerCard({
         bio={bio}
         abstract={abstract}
         topic={topic}
+        abstracts1={abstracts1}
+        topics1={topic1}
       />
     </>
   );

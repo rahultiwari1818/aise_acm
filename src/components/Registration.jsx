@@ -78,7 +78,13 @@ const Registration = () => {
 
         <RegistrationFeeAndNotes />
 
+        {/* {
+          seats < 40 
+          && */}
+
         <RegistrationForm />
+        {/* } */}
+
 
         {/* <div className="mt-10 bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
       <div className="flex items-center mb-3">
