@@ -1,7 +1,7 @@
 export default function TopicCard({ icon, title, description }) {
   return (
     <div
-      className="bg-white border border-gray-200 rounded-xl p-6 text-center shadow-sm 
+      className="bg-white border border-gray-200 rounded-xl p-6 text-center shadow-sm my-2 
                  hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 hover:shadow-blue-400 hover:bg-blue-100 hover:text-black"
     >
       <div className="flex justify-center items-center">

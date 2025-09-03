@@ -57,15 +57,15 @@ const logoutHandler = async () => {
 
   return (
     <nav className="bg-white shadow-md fixed top-0 w-full z-50">
-      <div className={` ${token  ? "max-w-8xl" :"max-w-7xl"} mx-auto px-4 py-3 flex justify-between items-center`}>
+      <div className={` ${token  ? "max-w-8xl " :"max-w-7xl"} mx-auto px-4 py-2 md:py-3  flex justify-between items-center`}>
         <div className="text-2xl font-bold text-blue-600">
           <a href="/">
-            <img src={logo} alt="logo" className="h-16 w-32" />
+            <img src={logo} alt="logo" className="md:h-16 md:w-32 h-12 w-24" />
           </a>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex space-x-6">
+        <div className="hidden lg:flex space-x-2 xl:space-x-4">
           {navLinks.map((link) => {
             if (link.href.includes("#")) {
               return (
@@ -127,7 +127,7 @@ const logoutHandler = async () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

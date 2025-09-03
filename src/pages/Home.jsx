@@ -19,14 +19,14 @@ export default function Home() {
 
         <section
           id="about"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <About />
         </section>
 
         {/* <section
           id="agenda"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 py-5 bg-gray-100 shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 py-5 bg-gray-100 shadow-2xl"
         >
           <Agenda />
 
@@ -34,27 +34,27 @@ export default function Home() {
 
         <section
           id="organizers"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <SpeakerSection />
         </section>
 
         <section
           id="TargetAudience"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
         >
           <TargetAudience />
         </section>
 
         <section
           id="Venue"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <VenueDates />
         </section>
         <section
           id="Registration"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
         >
           <Registration />
         </section>
@@ -62,14 +62,14 @@ export default function Home() {
 
         {/* <section
           id="SocialEvents"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-gray-100 shadow-2xl"
         >
           <SocialEvents />
         </section> */}
 
         <section
           id="Accommodation"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <Accommodation />
         </section>
@@ -77,20 +77,20 @@ export default function Home() {
 
         <section
           id="Grant"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <TravelGrants />
         </section>
 
         <section
           id="Venue"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <AboutCity />
         </section>
         <section
           id="Sponsors"
-          className="scroll-mt-20 md:mx-5 lg:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
+          className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 bg-white shadow-2xl"
         >
           <Sponsors />
         </section>

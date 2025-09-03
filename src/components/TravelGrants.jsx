@@ -158,7 +158,7 @@ export default function TravelGrants() {
           
           <a
             href={`mailto:aise2026.dau@gmail.com`}
-            className="text-blue-600 underline px-4"
+            className="text-blue-600 underline lg:px-4 block lg:inline"
           >
            aise2026.dau@gmail.com 
           </a>

@@ -1,4 +1,11 @@
-export default function ChairCard({ image, name, title, bio,email,phno}) {
+export default function ChairCard({ image, name, title, bio, email, phno }) {
+  // Format phone number for display (e.g., "+91 79 6826 1618")
+  const formattedPhno = phno?.replace(/^(\+91)(\d{2})(\d{4})(\d{4})$/, "$1 $2 $3 $4");
+
+  // Clean phone number for href (e.g., "+917968261618")
+  const telPhno = phno?.replace(/\D/g, ""); // removes all non-digit characters
+  const telHref = telPhno ? `tel:+${telPhno}` : "#";
+
   return (
     <div
       className="flex flex-col items-center gap-5 bg-white border border-gray-200 
@@ -12,10 +19,18 @@ export default function ChairCard({ image, name, title, bio,email,phno}) {
       />
       <div className="text-center">
         <p className="text-lg font-bold text-gray-800">{name}</p>
-        <p className="text-sm text-indigo-600">{title}</p>
-        <p className="text-sm text-gray-700 mt-2">{bio}</p>
-        <p className="text-sm text-gray-700 mt-2"><a href={`mailto:${email}`}>{email}</a></p>
-        <p className="text-sm text-gray-700 mt-2"><a href={`tel:${phno}`}>{phno}</a></p>
+        {title && <p className="text-sm text-indigo-600">{title}</p>}
+        {bio && <p className="text-sm text-gray-700 mt-2">{bio}</p>}
+        {email && (
+          <p className="text-sm text-gray-700 mt-2">
+            <a href={`mailto:${email}`}>{email}</a>
+          </p>
+        )}
+        {phno && (
+          <p className="text-sm text-gray-700 mt-2">
+            <a href={telHref}>{formattedPhno}</a>
+          </p>
+        )}
       </div>
     </div>
   );

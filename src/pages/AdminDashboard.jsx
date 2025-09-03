@@ -9,7 +9,6 @@ import debounce from "../utils/otherUtils.js";
 import ViewUserDialog from "../components/sub-components/ViewUserDialog.jsx";
 import GrantAllocationDialog from "../components/sub-components/GrantAllocationDialog.jsx";
 
-
 export default function AdminDashboard() {
   const [users, setUsers] = useState([]);
   const [hostels, setHostels] = useState([]);
@@ -20,54 +19,48 @@ export default function AdminDashboard() {
   const [isOpenAllocateRoomDialog, setIsOpenAllocateRoomDialog] =
     useState(false);
 
-      const [isOpenGrantDialog, setIsOpenGrantDialog] =
-    useState(false);
+  const [isOpenGrantDialog, setIsOpenGrantDialog] = useState(false);
 
-
-    const [grantData,setGrantData] = useState({
-      id:"",status:""
-    })
-
-  const [isOpenUserDetailsDialog,setIsOpenUserDetailsDialog] = useState(false);
-
-  const openGrantDialog = (id,status)=>{
-    setIsOpenGrantDialog(true);
-    setGrantData(()=>{
-      return {
-        id,status
-      }
-    })
-  }
-
-  const closeGrantDialog = useCallback(()=>{
-    setIsOpenGrantDialog(false);
-    setGrantData(()=>{
-      return {
-        id:"",status:""
-      }
-    })
-    fetchGrantRegistrations();
-  },[]);
-
-  const closeUserDetailsDialog = useCallback(()=>{
-    setIsOpenUserDetailsDialog(false);
-  },[])
-
-
-
-  
-  const [selectedUserDetails, setSelectedUserDetails] = useState({
-    email:"",
-    phno:"",
-    name:"",
-    research_area:"",
-    category:"",
-    registered_on:""
+  const [grantData, setGrantData] = useState({
+    id: "",
+    status: "",
   });
 
+  const [isOpenUserDetailsDialog, setIsOpenUserDetailsDialog] = useState(false);
 
+  const openGrantDialog = (id, status) => {
+    setIsOpenGrantDialog(true);
+    setGrantData(() => {
+      return {
+        id,
+        status,
+      };
+    });
+  };
 
+  const closeGrantDialog = useCallback(() => {
+    setIsOpenGrantDialog(false);
+    setGrantData(() => {
+      return {
+        id: "",
+        status: "",
+      };
+    });
+    fetchGrantRegistrations();
+  }, []);
 
+  const closeUserDetailsDialog = useCallback(() => {
+    setIsOpenUserDetailsDialog(false);
+  }, []);
+
+  const [selectedUserDetails, setSelectedUserDetails] = useState({
+    email: "",
+    phno: "",
+    name: "",
+    research_area: "",
+    category: "",
+    registered_on: "",
+  });
 
   const [selectedRegistrationData, setSelectedRegistrationData] = useState({
     id: "",
@@ -148,11 +141,11 @@ export default function AdminDashboard() {
   // 🔹 Extend handleViewChange
   const handleViewChange = (v) => {
     setView(v);
-    if (v === "users" ) {
+    if (v === "users") {
       fetchUsers();
-    } else if (v === "hostels" ) {
+    } else if (v === "hostels") {
       fetchHostelRegistrations();
-    } else if (v === "grants" ) {
+    } else if (v === "grants") {
       fetchGrantRegistrations();
     }
   };
@@ -216,10 +209,38 @@ export default function AdminDashboard() {
           <button
             onClick={() =>
               view === "hostels"
-                ? exportToExcel(hostels)
+                ? exportToExcel(
+                    hostels.map((row) => {
+                      const obj = {
+                        ...row.registration_id,
+                        ...row,
+                      };
+
+                      delete obj["registration_id"];
+                      delete obj["_id"];
+                      delete obj["__v"];
+
+                      return obj;
+                    }),
+                    "hostel_registrations.xlsx"
+                  )
                 : view === "users"
-                ? exportToExcel(users)
-                : exportToExcel(grants)
+                ? exportToExcel(users, "registrations.xlsx")
+                : exportToExcel(
+                    grants.map((row) => {
+                      const obj = {
+                        ...row.user_id,
+                        ...row,
+                      };
+
+                      delete obj["user_id"];
+                      delete obj["_id"];
+                      delete obj["__v"];
+
+                      return obj;
+                    }),
+                    "grant_applications.xlsx"
+                  )
             }
             className="px-4 py-2 rounded my-2 cursor-pointer bg-green-500 text-white hover:text-green-500 hover:bg-white hover:border-green-500 border"
           >
@@ -263,7 +284,6 @@ export default function AdminDashboard() {
                   <th className="p-3 text-left">Status</th>
                   <th className="p-3 text-left">Applied On</th>
                   <th className="p-3 text-left">Action</th>
-
                 </tr>
               </thead>
               <tbody>
@@ -303,7 +323,7 @@ export default function AdminDashboard() {
                       <td className="p-3">
                         {formatDateToDDMMYYYY(g.created_at)}
                       </td>
-                                            <td
+                      <td
                         className={`p-3 capitalize font-medium ${
                           g.status === "approved"
                             ? "text-green-600"
@@ -316,15 +336,10 @@ export default function AdminDashboard() {
                       </td>
                       <td className="p-3">
                         <button
-                          onClick={() =>{
-
+                          onClick={() => {
                             console.log("called");
-                            openGrantDialog(
-                              g._id,
-                              g.status
-                            )
-                          }
-                          }
+                            openGrantDialog(g._id, g.status);
+                          }}
                           className={`px-3 py-2 text-sm rounded ${
                             g.status === "pending"
                               ? "bg-green-600 hover:bg-green-700"
@@ -333,7 +348,7 @@ export default function AdminDashboard() {
                         >
                           Change Status
                         </button>
-                        </td>
+                      </td>
                     </tr>
                   ))
                 )}
@@ -349,6 +364,8 @@ export default function AdminDashboard() {
                   <th className="p-3 text-left">Name</th>
                   <th className="p-3 text-left">Email</th>
                   <th className="p-3 text-left">Phone</th>
+                  <th className="p-3 text-left">Affiliation</th>
+
                   <th className="p-3 text-left">Category</th>
                   <th className="p-3 text-left">Current Degree</th>
                   <th className="p-3 text-left">Gender</th>
@@ -372,6 +389,7 @@ export default function AdminDashboard() {
                       <td className="p-3">{u.name}</td>
                       <td className="p-3">{u.email}</td>
                       <td className="p-3">{u.phone_number}</td>
+                      <td className="p-3">{u.affiliation}</td>
                       <td className="p-3 capitalize">{u.category}</td>
                       <td className="p-3 capitalize">
                         {u?.current_degree || "-"}
@@ -379,19 +397,24 @@ export default function AdminDashboard() {
                       <td className="p-3">{u.gender}</td>
                       <td className="p-3">
                         {u?.research_area.length > 20 ? (
-                          <span className="text-blue-600 cursor-pointer" onClick={()=>{
-                            setIsOpenUserDetailsDialog(true);
-                            setSelectedUserDetails(()=>{
-                              return {
-                                name:u?.name,
-                                email:u?.email,
-                                registered_on:u?.created_at,
-                                phno:u?.phone_number,
-                                research_area:u?.research_area,
-                                category:u?.category
-                              }
-                            })
-                          }}>{u?.research_area?.substring(0, 20)}...</span>
+                          <span
+                            className="text-blue-600 cursor-pointer"
+                            onClick={() => {
+                              setIsOpenUserDetailsDialog(true);
+                              setSelectedUserDetails(() => {
+                                return {
+                                  name: u?.name,
+                                  email: u?.email,
+                                  registered_on: u?.created_at,
+                                  phno: u?.phone_number,
+                                  research_area: u?.research_area,
+                                  category: u?.category,
+                                };
+                              });
+                            }}
+                          >
+                            {u?.research_area?.substring(0, 20)}...
+                          </span>
                         ) : (
                           u.research_area
                         )}
@@ -513,20 +536,20 @@ export default function AdminDashboard() {
         currentStatus={selectedRegistrationData.status}
       />
       <ViewUserDialog
-      isOpen={isOpenUserDetailsDialog}
-      onClose={closeUserDetailsDialog}
-      name={selectedUserDetails.name}
-      email={selectedUserDetails.email}
-      category={selectedUserDetails.category}
-      phone={selectedUserDetails.phno}
-      registered_on={selectedUserDetails.registered_on}
-      research_area={selectedUserDetails.research_area}
+        isOpen={isOpenUserDetailsDialog}
+        onClose={closeUserDetailsDialog}
+        name={selectedUserDetails.name}
+        email={selectedUserDetails.email}
+        category={selectedUserDetails.category}
+        phone={selectedUserDetails.phno}
+        registered_on={selectedUserDetails.registered_on}
+        research_area={selectedUserDetails.research_area}
       />
-      <GrantAllocationDialog 
-      isOpen={isOpenGrantDialog}
-      onClose={closeGrantDialog}
-      id={grantData.id}
-      currentStatus={grantData.status}
+      <GrantAllocationDialog
+        isOpen={isOpenGrantDialog}
+        onClose={closeGrantDialog}
+        id={grantData.id}
+        currentStatus={grantData.status}
       />
     </>
   );

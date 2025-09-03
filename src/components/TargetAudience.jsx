@@ -42,7 +42,7 @@ export default function TargetAudience() {
         {data.footnotes.map((note, idx) => (
           <div
             key={idx}
-            className="flex gap-4 items-start p-6 bg-gray-50 rounded-xl border border-gray-200"
+            className="flex gap-4 items-start p-3 md:p-6 bg-gray-50 rounded-xl border border-gray-200"
           >
             <div className={` h-12 flex items-center justify-center bg-indigo-800 rounded-full ${idx===0  ? "w-16" : "w-12"}`}>
               <img src={note.icon} alt={note.title} className={` h-12 rounded-full ${idx===0  ? "w-16" : "w-12"}`} />

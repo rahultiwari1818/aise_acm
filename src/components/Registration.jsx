@@ -111,20 +111,34 @@ const Registration = () => {
           <h2 className="text-xl font-semibold mb-2">👥 Contact us</h2>
           <section className="mt-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ChairCard
+              {/* <ChairCard
                 bio={""}
                 name={"Saurabh Tiwari"}
                 image={saurabh_sir}
                 email={"saurabh_t@dau.ac.in"}
-                phno={"+918224009398"}
+                phno={"+9107968261618"}
               />
               <ChairCard
                 bio={""}
                 name={"Yash Agrawal"}
                 image={yash_sir}
                 email={"yash_agrawal@dau.ac.in"}
-                phno={" +919882114669"}
-              />
+                phno={" +9107968261629"}
+              /> */}
+              <ChairCard
+  name="Saurabh Tiwari"
+  image={saurabh_sir}
+  email="saurabh_t@dau.ac.in"
+  phno="+917968261618"  // Raw format (for processing)
+/>
+
+<ChairCard
+  name="Yash Agrawal"
+  image={yash_sir}
+  email="yash_agrawal@dau.ac.in"
+  phno="+917968261629"
+/>
+
             </div>
           </section>
           {/* <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm text-gray-700">

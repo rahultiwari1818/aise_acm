@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function RegistrationFeeAndNotes() {
   const notes = [
     "The registration fee for first 40 school participants will be reimbursed after attending the school, provided they attend all four days. Rest of the partcipant's registration fees will not be reimbursed.",
+    "Please note that the registration fees will only be refundable after the school, subject to the participant's attendance on all four days. Otherwise, the fees will not be refundable.",
     "Please apply for the school at the earliest by paying the registration fees.",
     "Registration Fees also includes 18% GST.",
     // "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
@@ -37,14 +38,18 @@ export default function RegistrationFeeAndNotes() {
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Students
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹400 + 18% GST</td>
+              <td className="px-6 py-4 border-r border-gray-300">
+                ₹400 + 18% GST
+              </td>
               {/* <td className="px-6 py-4">₹500 </td> */}
             </tr>
             <tr className="bg-white">
               <td className="px-6 py-4 font-semibold border-r border-gray-300">
                 Faculty
               </td>
-              <td className="px-6 py-4 border-r border-gray-300">₹800 + 18% GST</td>
+              <td className="px-6 py-4 border-r border-gray-300">
+                ₹800 + 18% GST
+              </td>
               {/* <td className="px-6 py-4">₹1000 </td> */}
             </tr>
             <tr className="bg-gray-50">
@@ -86,6 +91,12 @@ export default function RegistrationFeeAndNotes() {
             if (index === 0) {
               return (
                 <li key={index} className="font-bold">
+                  {note}
+                </li>
+              );
+            } else if (index === 1) {
+              return (
+                <li key={index} className="font-bold text-red-500">
                   {note}
                 </li>
               );
