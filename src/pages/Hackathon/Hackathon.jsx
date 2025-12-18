@@ -4,7 +4,7 @@
 import hackathonBackground from "../../assets/hackathonBackground.jpg";
 import hackathonPoster from "../../assets/poster.png"; 
 import hackathonBanner from "../../assets/banner_desktop.png"; 
-import "./Hackathon.css";
+import "./hackathon.css";
 
 // const sponsors = [
 //   { name: "Intuitive", logo: sponsor2Logo, id: 1 },
