@@ -1,0 +1,41 @@
+/* Style for the sponsor logos */
+.sponsor-logo {
+  max-width: 100%; /* Prevents logos from exceeding container width */
+  height: auto; /* Ensures logos maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+/* For better spacing and alignment */
+.sponsor-logo:nth-child(1) {
+  margin-right: 20px; /* Right margin for the first logo */
+}
+
+.sponsor-logo:nth-child(2) {
+  margin-left: 20px; /* Left margin for the second logo */
+}
+
+/* Add hover effect for a visual effect */
+.sponsor-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logos on hover */
+}
+
+/* Responsive adjustments for logo sizes */
+@media (max-width: 768px) {
+  .sponsor-logo {
+    width: 160px; /* Set a fixed width for smaller screens */
+    height: 160px; /* Set a fixed height to maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-logo {
+    width: 100px; /* Further reduce the size for very small screens */
+    height: 100px;
+  }
+}
+
+/* Optional: Apply grayscale or other effects for consistency */
+.sponsor-logo:nth-child(2),
+.sponsor-logo:nth-child(3) {
+  filter: whitescale(10%); /* Make the last two logos grayscale */
+}

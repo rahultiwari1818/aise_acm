@@ -79,9 +79,10 @@ const HostelForm = ({ isOpen, onClose }) => {
     data.append("idProof", file);
 
     try {
+      return;
       const URL = import.meta.env.VITE_API_URL;
 
-      const res = await axios.post(`${URL}/api/v1/hostel/register`, data);
+      const res = await axios.post(`${URL}/api/v1/`, data);
       toast.success(res.data.message);
       setForm({
         emailOrPhone: "",
@@ -174,8 +175,9 @@ const HostelForm = ({ isOpen, onClose }) => {
 
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={true}
           className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>

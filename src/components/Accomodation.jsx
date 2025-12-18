@@ -153,8 +153,9 @@ export default function Accommodation() {
 </div>
 
 <div className=" flex justify-center items-center py-5">
-  <button className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
+  <button className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition cursor-pointer"
   onClick={openHostelFormDialog}
+  // disabled={true}
   >
     Book Hostel
   </button>

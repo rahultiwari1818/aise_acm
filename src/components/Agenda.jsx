@@ -1,69 +1,53 @@
+import { useState } from "react";
 import data from "../data/schedule";
 import SectionHeader from "./sub-components/SectionHeader";
 
 export default function Agenda() {
-  const days = ["Wednesday", "Thursday", "Friday", "Saturday"];
-  const dates = ["7 Jan", "8 Jan", "9 Jan", "10 Jan"];
+  const days = Object.keys(data.schedule); // ["7 Jan", "8 Jan", ...]
+  const [activeDay, setActiveDay] = useState(days[0]);
 
   return (
     <div className="my-12">
-      <SectionHeader title="Agenda" />
+      <SectionHeader title="Program Schedule (Tentative)" />
+      {/* <p className="text-sm text-gray-600 text-center font-semibold">(subject to change/update)</p> */}
 
-      <div className="overflow-x-auto shadow-xl rounded-2xl">
-        <table className="min-w-[900px] w-full text-sm text-center border-collapse">
-          {/* Table Head */}
-          <thead>
-            <tr className="bg-gradient-to-r from-indigo-800 to-blue-800 text-white">
-              <th className="px-4 md:px-6 py-5 font-bold text-base sticky left-0 bg-indigo-800 z-10 rounded-tl-2xl">
-                Time
-              </th>
-              {days.map((day, index) => (
-                <th
-                  key={day}
-                  className={`px-4 md:px-6 py-5 font-semibold text-base ${
-                    index === days.length - 1 ? "rounded-tr-2xl" : ""
-                  }`}
-                >
-                  {day}, {dates[index]}
-                </th>
-              ))}
+      {/* Day Tabs */}
+      <div className="flex justify-center gap-3 flex-wrap mt-6 mb-10">
+        {days.map((day) => (
+          <button
+            key={day}
+            onClick={() => setActiveDay(day)}
+            className={`
+              px-5 py-2 rounded-full border transition font-medium
+              ${activeDay === day 
+                ? "bg-indigo-700 text-white border-indigo-700 shadow-md" 
+                : "bg-white text-gray-700 border-gray-300 hover:bg-indigo-50" }
+            `}
+          >
+            {day}
+          </button>
+        ))}
+      </div>
+
+      {/* Day Schedule Table */}
+      <div className="max-w-4xl mx-auto overflow-x-auto px-5">
+        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+          <thead className="bg-indigo-600 text-white">
+            <tr>
+              <th className="py-3 px-4 text-center font-semibold text-sm text-nowrap">Time</th>
+              <th className="py-3 px-4 text-center font-semibold text-sm text-nowrap">Topic</th>
+              <th className="py-3 px-4 text-center font-semibold text-sm text-nowrap">Speaker</th>
             </tr>
           </thead>
-
-          {/* Table Body */}
-          <tbody className="text-gray-800">
-            {data.schedule.map((slot, idx) => (
-              <tr
-                key={idx}
-                className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}
+          <tbody>
+            {data.schedule[activeDay].map((item, i) => (
+              <tr 
+                key={i} 
+                className={`transition duration-150 ease-in-out ${i % 2 === 0 ? "bg-gray-50" : "bg-white"} hover:bg-indigo-50`}
               >
-                <td className="px-4 md:px-6 py-5 font-bold text-indigo-800 text-sm sticky left-0 bg-white z-10 border-r border-l border-gray-200">
-                  {slot.time}
-                </td>
-                {days.map((day) => (
-                  <td
-                    key={day}
-                    className="px-4 md:px-6 py-5 align-middle text-sm border-r border-gray-200"
-                  >
-                    <div
-                      className="leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          typeof slot[day] === "string"
-                            ? slot[day]
-                            : slot[day]?.props?.children?.map
-                            ? slot[day].props.children
-                                .map((el) =>
-                                  typeof el === "string"
-                                    ? el
-                                    : `<a href="#" class='text-indigo-700 font-medium underline'>${el.props.children}</a>`
-                                )
-                                .join("<br />")
-                            : "",
-                      }}
-                    />
-                  </td>
-                ))}
+                <td className="py-3 px-4 text-center text-gray-800 text-nowrap">{item.time}</td>
+                <td className="py-3 px-4 text-center text-gray-800  ">{item.event}</td>
+                <td className="py-3 px-4 text-center text-gray-800 ">{item?.speaker}</td>
               </tr>
             ))}
           </tbody>

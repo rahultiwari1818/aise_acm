@@ -8,6 +8,7 @@ import Accommodation from "../components/Accomodation";
 import TravelGrants from "../components/TravelGrants";
 import Sponsors from "../components/Sponsors";
 import Registration from "../components/Registration";
+import Agenda from "../components/Agenda";
 
 export default function Home() {
   return (
@@ -24,13 +25,13 @@ export default function Home() {
           <About />
         </section>
 
-        {/* <section
+        <section
           id="agenda"
           className="scroll-mt-20 md:mx-5 lg:mx-32 xl:mx-44 md:px-5 md:my-10 py-5 bg-gray-100 shadow-2xl"
         >
           <Agenda />
 
-        </section> */}
+        </section>
 
         <section
           id="organizers"

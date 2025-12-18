@@ -13,15 +13,18 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "/" },
     // { label: "About", href: "/#about" },
-    { label: "Program", href: "/#agenda" },
+    { label: "Schedule", href: "/#agenda" },
     { label: "Organizers", href: "/#organizers" },
     { label: "Speakers", href: "/speakers" },
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
-    { label: "5 MRT", href: "/5mrt" },
-    { label: "Grant", href: "/#Grant" },
-    { label: "Industry Showcase", href: "/industry-showcase" },
-    { label: "Hackathon", href: "/hackathon" },
+    // { label: "5 MRT", href: "/5mrt" },
+    { label: "Travel Grant", href: "/#Grant" },
+    { label: "Idea Showcase", href: "/idea-showcase" },
+    { label: "Panel Discussion", href: "/panel-discussion" },
+    
+    // { label: "Industry Showcase", href: "/industry-showcase" },
+    // { label: "Hackathon", href: "/hackathon" },
   ];
 
   const handleHashNavigation = (href) => {
@@ -65,7 +68,7 @@ const logoutHandler = async () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex space-x-2 xl:space-x-4">
+        <div className="hidden lg:flex space-x-2 lg:text-xs xl:text-base xl:space-x-4">
           {navLinks.map((link) => {
             if (link.href.includes("#")) {
               return (

@@ -1,10 +1,8 @@
 import "./App.css";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
 import RouterApp from "./router/Router.jsx";
 import { useEffect, useState } from "react";
-import loaderIcon from "./assets/logo.png"; // <-- Replace with your actual icon path
+import loaderIcon from "./assets/logo.png"; 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,8 +19,8 @@ function App() {
     // Listen for window load event
     // window.addEventListener("load", handleLoad);
 
-    // // // Clean up
-    // return () => window.removeEventListener("load", handleLoad);/
+    // Clean up
+    // return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   if (loading) {
@@ -39,9 +37,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <RouterApp />
-      <Footer />
       <ToastContainer />
     </BrowserRouter>
   );

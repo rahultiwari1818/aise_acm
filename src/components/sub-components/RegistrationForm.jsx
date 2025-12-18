@@ -44,8 +44,8 @@ const MultiStepRegistrationForm = () => {
     if (!formData.address.trim()) newErrors.address = "Address is required.";
     if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
       newErrors.email = "Valid email is required.";
-    if (!formData.phone.match(/^[6-9]\d{9}$/))
-      newErrors.phone = "Valid 10-digit phone number is required.";
+    if (!formData.phone)
+      newErrors.phone = "Valid phone number is required.";
     if (!formData.affiliation.trim())
       newErrors.affiliation = "Affiliation is required.";
     if (!formData.category) newErrors.category = "Please select a category.";
@@ -70,6 +70,7 @@ const MultiStepRegistrationForm = () => {
   };
 
   const handleNext = () => {
+    return;
     if (validateStep1()) {
       setStep(2);
     }
@@ -80,6 +81,7 @@ const MultiStepRegistrationForm = () => {
   };
 
   const handleSubmit = async () => {
+    return;
     if (!validateStep2()) return;
 
     try {
@@ -90,7 +92,7 @@ const MultiStepRegistrationForm = () => {
       });
 
       const res = await axios.post(
-        `${URL}/api/v1/registration/register`,
+        `${URL}/api/v1/`,
         form,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -169,6 +171,7 @@ const MultiStepRegistrationForm = () => {
                 onChange={handleChange}
                 placeholder={placeholder}
                 className="input w-full border p-2 rounded"
+                
               />
               {errors[name] && (
                 <p className="text-red-600 text-sm">{errors[name]}</p>
@@ -264,7 +267,10 @@ const MultiStepRegistrationForm = () => {
           <button
             type="button"
             onClick={handleNext}
-            className="w-full cursor-pointer mt-6 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            className="w-full  mt-6 bg-blue-600  text-white py-2 rounded hover:bg-blue-700 transition cursor-not-allowed "
+            // disabled
+            title="Registration is disabled "
+            disabled={true}
           >
             Next ➡️
           </button>
@@ -316,6 +322,7 @@ const MultiStepRegistrationForm = () => {
         accept=".pdf,image/*"
         onChange={handleChange}
         className="w-full border border-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            disabled={true}
       />
       {errors.paymentReceipt && (
         <p className="text-red-600 text-sm mt-1">{errors.paymentReceipt}</p>
@@ -334,6 +341,7 @@ const MultiStepRegistrationForm = () => {
         type="button"
         onClick={handleSubmit}
         className="px-4 py-2 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition"
+            disabled={true}
       >
         ✅ Submit Registration
       </button>

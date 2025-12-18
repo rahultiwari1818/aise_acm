@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function RegistrationFeeAndNotes() {
   const notes = [
-    "The registration fee for first 40 school participants will be reimbursed after attending the school, provided they attend all four days. Rest of the partcipant's registration fees will not be reimbursed.",
+    "The registration fee  will be reimbursed to the school participants after attending the school, provided they attend all four days.",
     "Please note that the registration fees will only be refundable after the school, subject to the participant's attendance on all four days. Otherwise, the fees will not be refundable.",
     "Please apply for the school at the earliest by paying the registration fees.",
     "Registration Fees also includes 18% GST.",
     // "Accommodations for school participants on the DAU campus, tea/coffee, and lunch are complimentary.",
     "A participation certificate will be awarded to individuals with full attendance across all four days.",
-    "You may also register for the  hackathon seperately on January 9 to 11, 2026 at DAU, and accommodation will be provided in the university hostel at no additional cost.",
+    "You may also register for the hackathon separately on January 9 to 11, 2026 at DAU, and accommodation will be provided in the university hostel at a nominal charge.",
+    
     // "Accommodation will be provided in university campus hostels at no additional cost.",
     // "For more details, visit the Hackathon page.",
   ];
@@ -104,6 +105,9 @@ export default function RegistrationFeeAndNotes() {
               return <li key={index}>{note}</li>;
             }
           })}
+          <li className="font-black">
+            Last Date of Registration is 08th December 2025.
+          </li>
           <li>
             For more details, visit the{" "}
             <Link
@@ -116,6 +120,8 @@ export default function RegistrationFeeAndNotes() {
           </li>
         </ul>
       </div>
+            <h2 className="text-2xl font-bold mb-4 text-center text-red-500 mt-10">Registrations are Closed.</h2>
+
     </div>
   );
 }

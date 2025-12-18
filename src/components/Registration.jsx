@@ -33,6 +33,7 @@ const Registration = () => {
     <div className="min-h-screen px-4 py-8  text-black">
       <div className="max-w-3xl mx-auto">
         <SectionHeader title={"Registration"} />
+        
         <WhoCanAttend />
         {/* <p className="text-center text-blue-600 font-medium mb-6">
           🔧 Join the Future of Software Engineering
@@ -50,16 +51,19 @@ const Registration = () => {
             🗓️ Free registration deadline: 15 July
           </span> */}
         </div>
-
+{/* 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 text-sm sm:text-base">
           <span className="bg-blue-100 text-red-800 px-4 py-2 rounded-full">
             🚻 Only {TOTAL_SEATS - seats} Seats Left.
+            Registration is temporarily closed. We appreciate your interest and
+            encourage you to check back soon for updates! Thank you for your
+            patience.
           </span>
 
-          {/* <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
+          <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
             🗓️ Free registration deadline: 15 July
-          </span> */}
-        </div>
+          </span>
+        </div> */}
         {/* <div className="text-center mb-2 font-semibold text-lg">
           📧 How to Register
         </div>
@@ -84,7 +88,6 @@ const Registration = () => {
 
         <RegistrationForm />
         {/* } */}
-
 
         {/* <div className="mt-10 bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
       <div className="flex items-center mb-3">
@@ -126,19 +129,18 @@ const Registration = () => {
                 phno={" +9107968261629"}
               /> */}
               <ChairCard
-  name="Saurabh Tiwari"
-  image={saurabh_sir}
-  email="saurabh_t@dau.ac.in"
-  phno="+917968261618"  // Raw format (for processing)
-/>
+                name="Saurabh Tiwari"
+                image={saurabh_sir}
+                email="saurabh_t@dau.ac.in"
+                phno="+917968261618" // Raw format (for processing)
+              />
 
-<ChairCard
-  name="Yash Agrawal"
-  image={yash_sir}
-  email="yash_agrawal@dau.ac.in"
-  phno="+917968261629"
-/>
-
+              <ChairCard
+                name="Yash Agrawal"
+                image={yash_sir}
+                email="yash_agrawal@dau.ac.in"
+                phno="+917968261629"
+              />
             </div>
           </section>
           {/* <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm text-gray-700">
