@@ -5,29 +5,29 @@ import yash_sir from "../assets/chairs/yash_agarwal.jpg";
 import RegistrationFeeAndNotes from "./sub-components/RegistrationFeeAndNotes";
 import RegistrationForm from "./sub-components/RegistrationForm";
 import WhoCanAttend from "./sub-components/WhoCanAttend";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Registration = () => {
   const [seats, setSeats] = useState(0);
   const TOTAL_SEATS = import.meta.env.VITE_TOTAL_SEATS;
 
-  useEffect(() => {
-    const fetchSeats = async () => {
-      try {
-        const URL = import.meta.env.VITE_API_URL;
-        const { data } = await axios.get(
-          `${URL}/api/v1/registration/noOfRegisteredUsers`
-        );
-        setSeats(data.data);
-      } catch (error) {
-        console.log("Error while getting seats: ", error);
-        setSeats(0); // fallback value
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSeats = async () => {
+  //     try {
+  //       const URL = import.meta.env.VITE_API_URL;
+  //       const { data } = await axios.get(
+  //         `${URL}/api/v1/registration/noOfRegisteredUsers`
+  //       );
+  //       setSeats(data.data);
+  //     } catch (error) {
+  //       console.log("Error while getting seats: ", error);
+  //       setSeats(0); // fallback value
+  //     }
+  //   };
 
-    fetchSeats();
-  }, []);
+  //   fetchSeats();
+  // }, []);
 
   return (
     <div className="min-h-screen px-4 py-8  text-black">
