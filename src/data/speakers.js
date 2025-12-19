@@ -2,10 +2,10 @@ import chetan_sir from "../assets/speakers/chetan_sir.jpg";
 import sridhar_sir from "../assets/speakers/sridhar_chimalakonda.jpeg";
 import shouvick_sir from "../assets/speakers/shouvick_sir.jpg";
 import meenakshi_maam from "../assets/speakers/meenakshi_d_souza.jpg";
-import sangharatna_sir from "../assets/speakers/sangharatna_sir.jpg";
+// import sangharatna_sir from "../assets/speakers/sangharatna_sir.jpg";
 import santosh_sir from "../assets/speakers/santosh_singh.jpg";
 import sourish_sir from "../assets/speakers/sourish_sir.jpg";
-import ankush_sir from "../assets/speakers/ankush_sir.jpg";
+// import ankush_sir from "../assets/speakers/ankush_sir.jpg";
 import saurabh_sir from "../assets/speakers/saurabh_tiwari.jpg";
 import aditya_sir from "../assets/speakers/aditya_k.jpg";
 import vibhu_sir from "../assets/speakers/vibhu.jpeg";
@@ -14,7 +14,7 @@ import karthik_sir from "../assets/speakers/karthik.jpg";
 import sudkshina_maam from "../assets/speakers/sudakshina_maam.jpg";
 import vinay_sir from "../assets/speakers/vinay_k.jpeg";
 import pavan_kumar from "../assets/speakers/pavan_kumar.jpeg";
-import lov_kumar from "../assets/speakers/lov_kumar.jpg";
+// import lov_kumar from "../assets/speakers/lov_kumar.jpg";
 import satyendra_sir from "../assets/speakers/satyendra_singh.png"
 
 
@@ -65,7 +65,7 @@ const data = {
       topic: "Interrelation between Requirements Engineering and LLMs",
       bio: "Dr Chetan Arora is a Senior Lecturer in Software Engineering (SE), focusing on applied Artificial Intelligence in SE and other fields. He received his PhD degree from the University of Luxembourg (Luxembourg) with Prof. Lionel Briand, Masters degree in SE from the Technische Universität Kaiserslautern (Germany), and Bachelors in Engineering (CS) degree from Thapar University (India). He is the recipient of the best PhD thesis award in the ICT domain at Uni Luxembourg. Chetan also currently serves as the Director of Education (SSC) at the Faculty of IT at Monash.Prior to joining Monash University, he worked at SES Satellites (Luxembourg) in the department of Innovation Programs on applied AI for IoT and satellite communications (critical infrastructure protection & resilience). He has worked in industry and industry-collaboration research for several years. In his career, he has received above $1.1m in grants as the lead CI.\n His main areas of research interest are applied AI (ML and NLP), SatCom, and software engineering with an emphasis on requirements management and software trustworthiness.",
       image: chetan_sir,
-      abstract: "",
+      abstract: "--",
       link: "https://research.monash.edu/en/persons/chetan-arora",
     },
 
@@ -88,7 +88,7 @@ const data = {
       topic: "Is AI the Bad Cop for Software Engineering? - From Uncomfortable Realities to Radical Opportunities",
       bio: "Sridhar Chimalakonda is an Associate Professor in the Department of Computer Science & Engineering at Indian Institute of Technology Tirupati. He did his PhD and MS by Research in Computer Science & Engineering from IIIT Hyderabad. He is also an ACM India Eminent Speaker. He leads the Research in Intelligent Software and Human Analytics (RISHA) Lab which primarily works in the area of Software Engineering, and specifically AI for SE and SE for AI. We research effective and scalable ways to help developers improve quality of software by qualitatively and quantitatively analyzing a diversified range of software artifacts [such as code, commits, bugs, logs, patterns, designs and so on] in millions of software repositories.He is passionate about addressing societal challenges through computing research. Recently, he steered the development of an innovative game SurviveCovid-19 for Covid19 awareness and Mood of India portal to gauge the mood of people during Covid19 through Twitter analysis. \n\nHe volunteers for ACM SIGSOFT [Special Interest Group in Software Engineering] as Social Media Chair and as Core Committee member of ACM iSIGCSE [Special Interest Group in Computer Science Education]",
       image: sridhar_sir,
-      abstract: "",
+      abstract: "--",
       link: "https://old.iittp.ac.in/dr-sridhar-chimalakonda",
     },
     {
@@ -106,11 +106,10 @@ const data = {
       email: "",
       institution: "IIIT Bangalore, India",
       topic: "Black-box and White-box Testing of DNNs",
-      topic1: ["Black-box and White-box Testing of DNNs", "black-box attacks"],
-      abstracts1:["",""],
+      topic1: ["Black-box and White-box Testing of DNNs", "Hands-on session: Black-box attacks"],
+      abstracts1:["--","--"],
       bio: "Meenakshi is a Professor at IIIT Bangalore. Her research interests are in Formal Methods, Software Testing, Model Based Development for Embedded Software and Design and Architectures of Embedded Software. She is also interested in gender diversity and accessibility issues in IT. Meenakshi teaches courses on Software Testing, Automata theory and Computability, Discrete Mathematics, Graph Theory and Design and Analysis of Algorithms in IIIT-Bangalore. Meenakshi's course on Software Testing has been offered on the NPTEL, Swayam platform since 2017 and more than 73,000 learners have enrolled for this course over the years. Meenakshi also teaches in the B. Sc., B. S. online degree program of IIT Madras.Meenakshi did her Master’s in Mathematics from University of Madras, Chennai and her Ph. D. in Theoretical Computer Science from The Institute of Mathematical Sciences, Chennai. She joined the research department of Honeywell Technology Solutions, Bangalore soon after completing her Ph. D. and worked there in the areas of Formal Verification of Software Design, Model Based Development and Physical Access Control prior to joining IIIT Bangalore.",
       image: meenakshi_maam,
-      abstract: "",
       link: "https://www.iiitb.ac.in/faculty/meenakshi-dsouza",
     },
     // {
@@ -130,7 +129,7 @@ const data = {
       topic: "Advances in Source Code Representation for Predictive Modeling in Software Engineering",
       bio: "Santosh Singh Rathore is an Assistant Professor at ABV-IIITM Gwalior, India. He earned his Ph.D. from IIT Roorkee in 2017 and M.Tech from IIITDM Jabalpur in 2013. His research spans software fault prediction, quality assurance, and empirical software engineering. He has published 50+ papers and co-authored two Springer books.",
       image: santosh_sir,
-      abstract: "",
+      abstract: "--",
       link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SantoshSinghRathore",
     },
     
@@ -139,8 +138,9 @@ const data = {
       email: "",
       institution: "IIT Goa, India",
       topic: "Verification of Deep Neural Networks",
-      bio: "",
+      bio: "Dr. Sudakshina Dutta is an Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Technology (IIT) Goa. Her research interests lie in formal verification and static analysis, with a focus on developing techniques to improve the correctness, reliability, and safety of software systems. Her work bridges theory and practice in program analysis and verification.",
       image: sudkshina_maam,
+      abstract: "--",
       link: "https://iitgoa.ac.in/~sudakshina/",
     },
     {
@@ -158,8 +158,9 @@ const data = {
       email:"",
       institution: "TCS Research",
       topic: "Knowledge Extraction, Modeling, and Querying from Domain-specific documents",
-      bio: "",
+      bio: "Pavan Kumar Chittimalli is a Research Scientist at TCS Research, Pune, where he works in the area of software engineering and program analysis. His research interests include program analysis, business rule extraction and verification, regression testing, and reverse engineering of software systems, with an emphasis on applying rigorous analysis techniques to large-scale industrial software. He holds an M.Tech in Computer Science and Engineering from IIT Guwahati. At TCS Research, he has contributed to the design and development of analysis techniques and tools that bridge theoretical foundations with real-world software engineering challenges. His work has been published in peer-reviewed international conferences and journals.",
       image: pavan_kumar,
+      abstract:"--",
       link: "https://www.linkedin.com/in/pavankumarchittimalli/?originalSubdomain=in",
     },
     
@@ -170,7 +171,7 @@ const data = {
       topic: "AI in Software Engineering: Balancing Capability and Energy Efficiency",
       bio: "Prof. Sourish Dasgupta is an ever-curious researcher and educator. His deep interest in the role of AI in research methodologies led him to take a break from academia and set on an entrepreneurial journey for five years, which resulted in the founding of RAx Labs Inc., Delaware, USA. With some bright ex-students of DA-IICT, Prof. Dasgupta built RAx (https://raxter.io) - an AI-powered online assistant for making literature-review faster and more enriching for young researchers.Coming back from his entrepreneurial stint, Prof. Dasgupta is currently actively engaged in the analysis of less explored but important aspects of 'intelligence' in LLMs, such as their personalization capabilities, and also designing personalized models that are a lot smaller and more eco-friendly than contemporary LLMs. In his pastime, Prof. Dasgupta loves to cook and debate with students. Prof. Dasgupta did his Ph.D. in Computer Science from the University of Missouri – Kansas City, USA.",
       image: sourish_sir,
-      abstract: "",
+      abstract: "--",
       link: "https://www.daiict.ac.in/faculty-details/2321",
     },
     {
@@ -180,17 +181,17 @@ const data = {
       topic: "Large Language Models (LLMs), prompting, and the fundamentals of AI, featuring practical examples",
       email: "",
       image: satyendra_sir,
-      abstract: "",
+      abstract: "--",
       link: "https://mnit.ac.in/dept_cse/profile?fid=R6qO",
     },
     {
       name: "Saurabh Tiwari",
       email: "",
       institution: "DAU Gandhinagar, India",
-      topic: "AI in Software Engineering: Balancing Capability and Energy Efficiency",
+      topic1:[" AI in Software Engineering: Balancing Capability and Energy Efficiency","Leveraging LLMs for Automated Generation of Use Case Textual Descriptions from Requirements Specification"],
       bio: "Saurabh Tiwari is an Associate Professor at DA-IICT, Gandhinagar (India). Previously, he worked as a Postdoc Researcher at Mälardalen University (Sweden) and worked with Volvo Construction Equipments AB in the Model-Based System Engineering (MBT, MBD) area. His research interests are Requirements Engineering, Empirical Software Engineering, Mining Software Repositories, Green Computing, AI for SE, and HCI. He is also doing research in Software Engineering Education and Training to identify/devise innovative teaching methodologies to teach Software Engineering concepts. He received a research grant from the Science and Engineering Research Board (SERB, Government of India) under the Early Career Research Award scheme. He received two best paper awards at the 20th APSEC 2013 and 25th APSEC 2018 conferences, respectively. His PhD thesis was indexed in the ACM (Association for Computing Machinery) SIGSOFT (Special Interest Group on Software Engineering) list of PhD Dissertations in the area of Software Engineering (2016). He is a professional Senior Member of the ACM and IEEE.",
       image: saurabh_sir,
-      abstract: "",
+      abstracts1: ["--","--"],
       link: "https://www.daiict.ac.in/faculty/saurabh-tiwari",
     }
     // {

@@ -10,6 +10,7 @@ export default function SoeakerDetailDialog({
   abstracts1,
   topics1,
 }) {
+  // console.log(name,topic,abstract,bio,abstracts1,topics1)
   return (
     <DialogBox isOpen={isOpen} onClose={onClose} title="Speaker Details">
       <div className="p-6 w-full  bg-white rounded-2xl shadow-lg max-h-[70vh]  overflow-scroll">
