@@ -33,18 +33,22 @@ export default function SoeakerDetailDialog({
                   <>
                     <div>
                       <p className="text-sm font-medium text-gray-600">
-                        Title of the talk {idx+1} :{" "}
+                        Title of the talk {idx + 1} :{" "}
                       </p>
                       <p className="text-base text-gray-900">{top || "-"}</p>
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-600 ">
-                        Abstract {idx+1}:{" "}
-                      </p>
-                      <p className="text-base text-gray-900 ">
-                        {abstracts1[idx] || "-"}
-                      </p>
-                    </div>
+                    {abstracts1 && abstracts1[idx] !== "--" ? (
+                      <div>
+                        <p className="text-sm font-medium text-gray-600 ">
+                          Abstract {idx + 1}:{" "}
+                        </p>
+                        <p className="text-base text-gray-900 ">
+                          {abstracts1[idx] || "-"}
+                        </p>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                   </>
                 );
               })}
@@ -60,11 +64,13 @@ export default function SoeakerDetailDialog({
 
           {topics1 ? (
             <></>
-          ) : (
+          ) : abstract && abstract !== "--" ? (
             <div>
               <p className="text-sm font-medium text-gray-600 ">Abstract : </p>
               <p className="text-base text-gray-900 ">{abstract || "-"}</p>
             </div>
+          ) : (
+            <></>
           )}
         </div>
       </div>
