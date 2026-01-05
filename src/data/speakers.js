@@ -166,7 +166,7 @@ const data = {
       link: "https://www.linkedin.com/in/pavankumarchittimalli/?originalSubdomain=in",
     },
     {
-      name :"lov Kumar",
+      name :"Lov Kumar",
       email:"",
       institution:"NIT Kurukshetra,India",
       link:"https://nitkkr.ac.in/author/lovkumarnitkkr-ac-in/",
