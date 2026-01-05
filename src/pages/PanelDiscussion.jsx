@@ -106,7 +106,7 @@ export default function PanelDiscussion() {
               <strong>Time:</strong> 2.00–3.30 PM
             </li>
             <li>
-              <strong>Venue:</strong> AISE 2026 School Venue, DA-IICT Campus
+              <strong>Venue:</strong> Lecture Theatre - 1, DA-IICT Campus
             </li>
             <li>
               <strong>Audience:</strong> All registered participants of AISE
