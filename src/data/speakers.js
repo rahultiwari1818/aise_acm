@@ -16,6 +16,8 @@ import vinay_sir from "../assets/speakers/vinay_k.jpeg";
 import pavan_kumar from "../assets/speakers/pavan_kumar.jpeg";
 // import lov_kumar from "../assets/speakers/lov_kumar.jpg";
 import satyendra_sir from "../assets/speakers/satyendra_singh.png"
+import lov_kumar from "../assets/speakers/lov_kumar.jpg";
+import { ins } from "framer-motion/client";
 
 
 const data = {
@@ -163,7 +165,17 @@ const data = {
       abstract:"--",
       link: "https://www.linkedin.com/in/pavankumarchittimalli/?originalSubdomain=in",
     },
-    
+    {
+      name :"lov Kumar",
+      email:"",
+      institution:"NIT Kurukshetra,India",
+      link:"https://nitkkr.ac.in/author/lovkumarnitkkr-ac-in/",
+      image:lov_kumar,  
+      bio:"Dr. Lov Kumar is currently working as Assistant professor in the Department of Computer Engineering , NIT Kurukshetra . He received his Ph.D. in Computer Science and Engineering from NIT Rourkela, under the supervision of Prof. S. K. Rath. His current research interests are in the area of Mining Software Repositories, Software Analytics, and Social Media Analytics. His thesis is titled “Predicting Software Quality Parameters using Artificial Intelligence Techniques and Source Code Metrics”. He was a Faculty Member (at Thapar University) from Aug 2017 to Dec 2017 and BITS Pilani from Jan 2018 to Jan 2023. He has delivered over 60 invited talks, over 100 international refereed publications in international conferences and journals, and four published book chapter to his credit.  He has won several other awards including the Young Scientist Award, Best Researcher Award, and best paper Award. He has a broad range of interests and hobbies. He loves to play cricket, read books, play chess, and solve Sudoku puzzles.",
+      topic:"--",
+      abstract:"--",
+
+    },
     {
       name: "Sourish Dasgupta",
       email: "",

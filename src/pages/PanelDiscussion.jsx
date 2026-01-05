@@ -9,7 +9,7 @@ export default function PanelDiscussion() {
       <div className="max-w-5xl mx-auto px-6 text-gray-700 leading-relaxed text-justify">
         {/* Title Section */}
         <h2 className="text-2xl font-semibold text-blue-700 mb-4 text-center">
-          2030 and Beyond: Will AI Partner with, Replace, or Reinvent Software
+          2027 and Beyond: Will AI Partner with, Replace, or Reinvent Software
           Engineering?
         </h2>
 

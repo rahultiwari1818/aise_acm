@@ -48,7 +48,7 @@ const data = {
       { time: "1:00 PM - 2:00 PM", event: "Lunch Break" },
       {
         time: "2:00 PM - 3:30 PM",
-        event: "Panel Discussion on '2030 and Beyond: Will AI Partner With, Replace, or Reinvent Software Engineering?'",
+        event: "Panel Discussion on '2027 and Beyond: Will AI Partner With, Replace, or Reinvent Software Engineering?'",
         speaker: "Moderator: Sridhar Chimalakonda (IIT Tirupati)"
       },
       { time: "3:30 PM - 4:00 PM", event: "Tea Break" },
@@ -95,7 +95,7 @@ const data = {
       { time: "3:30 PM - 4:00 PM", event: "Tea Break" },
       {
         time: "4:00 PM Onwards",
-        event: "Short Tour (Visit to Akshardham, Gandhinagar)"
+        event: "Short tour to nearby places around Gandhinagar/Ahmedabad"
       }
     ],
 
