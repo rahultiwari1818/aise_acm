@@ -101,34 +101,35 @@ const data = {
 
     "10 Jan": [
       {
-        time: "9:30 AM - 10:30 AM",
+        time: "9:30 AM - 11:00 AM",
+        event: "Verification of Deep Neural Networks",
+        speaker: "Sudakshina Dutta (IIT Goa)"
+      },
+      {
+        time: "11:00 AM - 11:45 AM",
+        event: "Interactive Discussion session on “Research, SE Research, Career, Publications”",
+        speaker: "Chetan Arora (Monash University), Saurabh Tiwari (DAU)"
+      },
+      { time: "11:45 AM - 12:00 PM", event: "Tea Break" },
+      {
+        time: "12:00 PM - 1:15 PM",
+        event: "Machine Learning Pipeline for Software Fault Prediction with LLM-Driven Postmortem",
+        speaker: "Lov Kumar (NIT Kurukshetra)"
+      },
+      { time: "1:15 PM - 2:15 PM", event: "Lunch" },
+      {
+        time: "2:15 PM - 3:45 PM",
         event: "Software Architecture in the era of Generative and Agentic AI",
         speaker: "Karthik Vaidhyanathan (IIIT Hyderabad)"
       },
       {
-        time: "10:30 AM - 11:30 AM",
-        event: "Black-box and White-box Testing of DNNs",
-        speaker: "Meenakshi D'Souza (IIIT Bangalore)"
+        time: "3:45 PM - 4:30 PM",
+        event: "Valedictory"
       },
-      { time: "11:30 AM - 12:00 PM", event: "Tea Break" },
       {
-        time: "12:00 PM - 1:00 PM",
-        event: "Hands-on session on Black-Box Attacks",
-        speaker: "Meenakshi D'Souza (IIIT Bangalore)"
-      },
-      { time: "1:00 PM - 2:00 PM", event: "Lunch Break" },
-      {
-        time: "2:00 PM - 3:00 PM",
-        event: "Verification of Deep Neural Networks",
-        speaker: "Sudakshina Dutta (IIT Goa)"
-      },
-      { time: "3:00 PM - 3:30 PM", event: "Tea Break" },
-      {
-        time: "3:30 PM - 4:30 PM",
-        event: "Hands-On Session: Software Architecture in the era of Generative and Agentic AI",
-        speaker: "Karthik Vaidhyanathan (IIIT Hyderabad)"
-      },
-      { time: "4:30 PM - 5:00 PM", event: "Valedictory" }
+        time: "4:30 PM Onwards",
+        event: "High Tea / Informal Gathering / AISE 2026 Concludes"
+      }
     ]
   }
 };

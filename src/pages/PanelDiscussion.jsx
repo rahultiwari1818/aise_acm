@@ -69,11 +69,11 @@ export default function PanelDiscussion() {
                 <p className="text-gray-600">Accenture Labs</p>
               </li>
             </a>
-            <a href="https://www.linkedin.com/in/vinayvkulkarni/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/anupkalbalia/" target="_blank" rel="noopener noreferrer">
               {" "}
               <li className="p-4 bg-white rounded-md shadow-sm">
-                <p className="font-semibold text-gray-900">Vinay Kulkarni</p>
-                <p className="text-gray-600">TCS Research</p>
+                <p className="font-semibold text-gray-900">Anup Kalbalia</p>
+                <p className="text-gray-600"> Founder, Justuju</p>
               </li>
             </a>
             <a href="https://research.monash.edu/en/persons/chetan-arora" target="_blank" rel="noopener noreferrer">

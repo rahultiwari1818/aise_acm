@@ -127,8 +127,9 @@ export default function TravelGrants() {
         </a> */}
 
           <button
-            className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition"
-            onClick={openGrantFormDialog}
+            className="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition cursor-not-allowed"
+            // onClick={openGrantFormDialog}
+            disabled
           >
             Register For Grant
           </button>

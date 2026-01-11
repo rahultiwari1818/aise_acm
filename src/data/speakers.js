@@ -25,14 +25,14 @@ const data = {
     {
       name: "Aditya Kanade",
       email: "",
-      institution: "Microsoft Research",
+      institution: "Principal Engineer , Google ",
       topic:
         "Code Researcher: Deep Research Agent for Large Systems Code and Commit History",
       abstract:
         "Large Language Model (LLM)-based coding agents have shown promising results on coding benchmarks, but their effectiveness on systems code remains underexplored. Due to the size and complexities of systems code, making changes to a systems codebase is a daunting task, even for humans. It requires researching about many pieces of context, derived from the large codebase and its massive commit history, before making changes. Inspired by the recent progress on deep research agents, we design the first deep research agent for code, called Code Researcher, and apply it to the problem of generating patches for mitigating crashes reported in systems code. Code Researcher performs multi-step reasoning about semantics, patterns, and commit history of code to gather sufficient context. The context is stored in a structured memory which is used for synthesizing a patch. We evaluate Code Researcher on kBenchSyz, a benchmark of Linux kernel crashes, and show that it significantly outperforms strong baselines, achieving a crash-resolution rate of 58%, compared to 37.5% by SWE-agent. On an average, Code Researcher explores 10 files in each trajectory whereas SWE-agent explores only 1.33 files, highlighting Code Researcher's ability to deeply explore the codebase. Through another experiment on an open-source multimedia software, we show the generalizability of Code Researcher. Our experiments highlight the importance of global context gathering and multi-faceted reasoning for large codebases.",
       image: aditya_sir,
-      bio: "Aditya is a senior principal researcher at Microsoft Research India. He work on coding agents, agentic and code LMs, deep research and AI safety. He broadly interested in all aspects of building intelligent, trustworthy and scalable systems. Before joining Microsoft Research, he was a full professor at the Indian Institute of Science (2009-2022). He also spent two years as a staff visiting researcher at Google Brain (2018-2020).",
-      link: "https://www.microsoft.com/en-us/research/people/kanadeaditya/",
+      bio: "Aditya is a principal engineer at Google in the Developer AI org. He works on coding agents, agentic and code LMs, deep research and AI safety. He is broadly interested in all aspects of building intelligent, trustworthy and scalable systems. Before joining Google, he worked at Microsoft Research, and he was a full professor at the Indian Institute of Science (2009-2022). He also spent two years as a staff visiting researcher at Google Brain (2018-2020).",
+      link: "https://www.linkedin.com/in/aditya-kanade-572113139?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Vibhu S. Sharma",
