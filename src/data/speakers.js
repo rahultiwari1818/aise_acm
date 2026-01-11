@@ -25,7 +25,7 @@ const data = {
     {
       name: "Aditya Kanade",
       email: "",
-      institution: "Principal Engineer , Google ",
+      institution: "Google ",
       topic:
         "Code Researcher: Deep Research Agent for Large Systems Code and Commit History",
       abstract:
@@ -33,6 +33,7 @@ const data = {
       image: aditya_sir,
       bio: "Aditya is a principal engineer at Google in the Developer AI org. He works on coding agents, agentic and code LMs, deep research and AI safety. He is broadly interested in all aspects of building intelligent, trustworthy and scalable systems. Before joining Google, he worked at Microsoft Research, and he was a full professor at the Indian Institute of Science (2009-2022). He also spent two years as a staff visiting researcher at Google Brain (2018-2020).",
       link: "https://www.linkedin.com/in/aditya-kanade-572113139?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+
     },
     {
       name: "Vibhu S. Sharma",
@@ -172,7 +173,7 @@ const data = {
       link:"https://nitkkr.ac.in/author/lovkumarnitkkr-ac-in/",
       image:lov_kumar,  
       bio:"Dr. Lov Kumar is currently working as Assistant professor in the Department of Computer Engineering , NIT Kurukshetra . He received his Ph.D. in Computer Science and Engineering from NIT Rourkela, under the supervision of Prof. S. K. Rath. His current research interests are in the area of Mining Software Repositories, Software Analytics, and Social Media Analytics. His thesis is titled “Predicting Software Quality Parameters using Artificial Intelligence Techniques and Source Code Metrics”. He was a Faculty Member (at Thapar University) from Aug 2017 to Dec 2017 and BITS Pilani from Jan 2018 to Jan 2023. He has delivered over 60 invited talks, over 100 international refereed publications in international conferences and journals, and four published book chapter to his credit.  He has won several other awards including the Young Scientist Award, Best Researcher Award, and best paper Award. He has a broad range of interests and hobbies. He loves to play cricket, read books, play chess, and solve Sudoku puzzles.",
-      topic:"--",
+      topic:"Machine Learning Pipeline for Software Fault Prediction with LLM-Driven Postmortem",
       abstract:"--",
 
     },

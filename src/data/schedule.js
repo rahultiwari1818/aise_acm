@@ -73,7 +73,7 @@ const data = {
       {
         time: "9:30 AM - 10:30 AM",
         event: "Code Researcher: Deep Research Agent for Large Systems Code and Commit History",
-        speaker: "Aditya Kanade (Microsoft Research)"
+        speaker: "Aditya Kanade (Google)"
       },
       {
         time: "10:30 AM - 11:30 AM",

@@ -8,7 +8,7 @@ export default function Agenda() {
 
   return (
     <div className="my-12">
-      <SectionHeader title="Program Schedule (Tentative)" />
+      <SectionHeader title="Program Schedule" />
       {/* <p className="text-sm text-gray-600 text-center font-semibold">(subject to change/update)</p> */}
 
       {/* Day Tabs */}
