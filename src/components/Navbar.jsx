@@ -19,9 +19,10 @@ export default function Navbar() {
     { label: "Venue", href: "/#Venue" },
     { label: "Registration", href: "/#Registration" },
     // { label: "5 MRT", href: "/5mrt" },
-    { label: "Travel Grant", href: "/#Grant" },
+    // { label: "Travel Grant", href: "/#Grant" },
     { label: "Idea Showcase", href: "/idea-showcase" },
     { label: "Panel Discussion", href: "/panel-discussion" },
+    { label: "Gallery", href: "/gallery" },
     
     // { label: "Industry Showcase", href: "/industry-showcase" },
     // { label: "Hackathon", href: "/hackathon" },

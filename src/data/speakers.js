@@ -17,7 +17,6 @@ import pavan_kumar from "../assets/speakers/pavan_kumar.jpeg";
 // import lov_kumar from "../assets/speakers/lov_kumar.jpg";
 import satyendra_sir from "../assets/speakers/satyendra_singh.png"
 import lov_kumar from "../assets/speakers/lov_kumar.jpg";
-import { ins } from "framer-motion/client";
 
 
 const data = {

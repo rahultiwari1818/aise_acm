@@ -11,6 +11,7 @@ import IdeaShowcase from "../pages/IdeaShowcase";
 import PanelDiscussion from "../pages/PanelDiscussion";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import Gallery from "../pages/Gallery.jsx";
 
 export default function RouterApp() {
   const location = useLocation(); // Get the current route
@@ -29,7 +30,7 @@ export default function RouterApp() {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/idea-showcase" element={<IdeaShowcase />} />
         <Route path="/panel-discussion" element={<PanelDiscussion />} />
-        
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/adminDashboard" element={<AdminDashboard />} />
